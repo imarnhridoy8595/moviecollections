@@ -1,0 +1,38 @@
+[
+  {
+    "identifier": "night_of_the_living_dead",
+    "title": "Night of the Living Dead",
+    "year": 1968,
+    "genre": ["Horror"],
+    "director": "George A. Romero",
+    "description": "A group of strangers barricade themselves inside a farmhouse as the reanimated dead close in. Public domain due to a missing copyright notice on original prints.",
+    "runtime_minutes": 96
+  },
+  {
+    "identifier": "HisGirlFriday",
+    "title": "His Girl Friday",
+    "year": 1940,
+    "genre": ["Comedy", "Drama"],
+    "director": "Howard Hawks",
+    "description": "A newspaper editor tries to win back his ex-wife and star reporter for one last big story. Entered the public domain after its copyright was not renewed.",
+    "runtime_minutes": 92
+  },
+  {
+    "identifier": "Plan9fromOuterSpace",
+    "title": "Plan 9 from Outer Space",
+    "year": 1959,
+    "genre": ["Sci-Fi", "Horror"],
+    "director": "Ed Wood",
+    "description": "Aliens attempt to stop humanity from creating a doomsday weapon by reanimating the dead. Widely circulated in the public domain after lapse of copyright renewal.",
+    "runtime_minutes": 79
+  },
+  {
+    "identifier": "Nosferatu1922",
+    "title": "Nosferatu",
+    "year": 1922,
+    "genre": ["Horror", "Silent"],
+    "director": "F.W. Murnau",
+    "description": "An unauthorized silent adaptation of Dracula, an early landmark of horror cinema. Public domain as a pre-1929 work.",
+    "runtime_minutes": 94
+  }
+]
