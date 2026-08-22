@@ -1,20 +1,209 @@
 [
   {
-    "identifier": "HisGirlFriday",
+    "identifier": "his_girl_friday",
     "title": "His Girl Friday",
     "year": 1940,
     "genre": ["Comedy", "Drama"],
     "director": "Howard Hawks",
-    "description": "A newspaper editor tries to win back his ex-wife and star reporter for one last big story. Entered the public domain after its copyright was not renewed.",
+    "description": "A newspaper editor tries to win back his ex-wife and star reporter for one last big story, starring Cary Grant and Rosalind Russell.",
     "runtime_minutes": 92
   },
   {
-    "identifier": "Nosferatu1922",
-    "title": "Nosferatu",
-    "year": 1922,
+    "identifier": "abraham_lincoln",
+    "title": "Abraham Lincoln",
+    "year": 1930,
+    "genre": ["Biography", "Drama"],
+    "director": "D.W. Griffith",
+    "description": "A biography of the sixteenth U.S. president, directed by D.W. Griffith.",
+    "runtime_minutes": null
+  },
+  {
+    "identifier": "ThePhantomoftheOpera",
+    "title": "The Phantom of the Opera",
+    "year": 1925,
     "genre": ["Horror", "Silent"],
-    "director": "F.W. Murnau",
-    "description": "An unauthorized silent adaptation of Dracula, an early landmark of horror cinema. Public domain as a pre-1929 work.",
-    "runtime_minutes": 94
+    "director": "Rupert Julian",
+    "description": "A mysterious masked phantom haunts the Paris Opera and becomes obsessed with a young singer.",
+    "runtime_minutes": null
+  },
+  {
+    "identifier": "DasKabinettdesDoktorCaligariTheCabinetofDrCaligari",
+    "title": "The Cabinet of Dr. Caligari",
+    "year": 1919,
+    "genre": ["Horror", "Silent"],
+    "director": "Robert Wiene",
+    "description": "A landmark German expressionist horror film about a hypnotist and his sleepwalking subject, told through a framed narrative.",
+    "runtime_minutes": null
+  },
+  {
+    "identifier": "20000LeaguesUndertheSea",
+    "title": "20,000 Leagues Under the Sea",
+    "year": 1916,
+    "genre": ["Adventure", "Sci-Fi", "Silent"],
+    "director": "Stuart Paton",
+    "description": "An early special-effects-driven silent adaptation of Jules Verne's classic undersea adventure novel.",
+    "runtime_minutes": null
+  },
+  {
+    "identifier": "lost_world",
+    "title": "The Lost World",
+    "year": 1925,
+    "genre": ["Adventure", "Sci-Fi", "Silent"],
+    "director": "Harry O. Hoyt",
+    "description": "The first film adaptation of Arthur Conan Doyle's novel about explorers discovering a plateau where dinosaurs still roam.",
+    "runtime_minutes": null
+  },
+  {
+    "identifier": "gullivers_travels1939",
+    "title": "Gulliver's Travels",
+    "year": 1939,
+    "genre": ["Animation", "Fantasy", "Family"],
+    "director": "Max Fleischer",
+    "description": "An animated adaptation of the classic Jonathan Swift tale of a shipwrecked sailor among the tiny people of Lilliput.",
+    "runtime_minutes": null
+  },
+  {
+    "identifier": "JungleBook",
+    "title": "Jungle Book",
+    "year": 1942,
+    "genre": ["Adventure", "Family"],
+    "director": "Zoltan Korda",
+    "description": "A boy raised by wolves in the Indian jungle is adopted by a village, based on Rudyard Kipling's stories.",
+    "runtime_minutes": null
+  },
+  {
+    "identifier": "mclintok_widescreen",
+    "title": "McLintock!",
+    "year": 1963,
+    "genre": ["Comedy", "Western"],
+    "director": "Andrew V. McLaglen",
+    "description": "A John Wayne comedy-western about a wealthy rancher navigating his estranged wife's return and town politics.",
+    "runtime_minutes": 127
+  },
+  {
+    "identifier": "my_favorite_brunette",
+    "title": "My Favorite Brunette",
+    "year": 1947,
+    "genre": ["Comedy", "Mystery"],
+    "director": "Elliott Nugent",
+    "description": "A baby photographer mistaken for a detective gets tangled up in a real crime, starring Bob Hope and Dorothy Lamour.",
+    "runtime_minutes": null
+  },
+  {
+    "identifier": "house_on_haunted_hill_ipod",
+    "title": "House on Haunted Hill",
+    "year": 1959,
+    "genre": ["Horror", "Mystery"],
+    "director": "William Castle",
+    "description": "An eccentric millionaire offers five strangers a large reward for surviving one night in a haunted mansion.",
+    "runtime_minutes": null
+  },
+  {
+    "identifier": "suddenly",
+    "title": "Suddenly",
+    "year": 1954,
+    "genre": ["Thriller", "Film-Noir"],
+    "director": "Lewis Allen",
+    "description": "Hired assassins take a family hostage in their home while waiting to carry out a plot against the President, starring Frank Sinatra.",
+    "runtime_minutes": 77
+  },
+  {
+    "identifier": "TheStranger_0",
+    "title": "The Stranger",
+    "year": 1946,
+    "genre": ["Thriller", "Film-Noir"],
+    "director": "Orson Welles",
+    "description": "A war crimes investigator tracks a Nazi fugitive hiding under a false identity in a quiet Connecticut town.",
+    "runtime_minutes": null
+  },
+  {
+    "identifier": "dressed_to_kill",
+    "title": "Dressed to Kill",
+    "year": 1946,
+    "genre": ["Mystery", "Crime"],
+    "director": "Roy William Neill",
+    "description": "Sherlock Holmes, played by Basil Rathbone, investigates a case involving coded music boxes.",
+    "runtime_minutes": null
+  },
+  {
+    "identifier": "tarzans_revenge",
+    "title": "Tarzan's Revenge",
+    "year": 1938,
+    "genre": ["Adventure"],
+    "director": "D. Ross Lederman",
+    "description": "A jungle adventure entry in the classic Tarzan film series.",
+    "runtime_minutes": null
+  },
+  {
+    "identifier": "charlie_chaplin_film_fest",
+    "title": "Charlie Chaplin Festival",
+    "year": 1938,
+    "genre": ["Comedy", "Silent"],
+    "director": "Charles Chaplin",
+    "description": "A compilation of four classic 1917 Chaplin shorts: The Adventurer, The Cure, Easy Street, and The Immigrant.",
+    "runtime_minutes": null
+  },
+  {
+    "identifier": "3stooges",
+    "title": "Three Stooges Episodes",
+    "year": null,
+    "genre": ["Comedy", "Short"],
+    "director": "Unknown",
+    "description": "A compilation of four classic Three Stooges comedy shorts.",
+    "runtime_minutes": null
+  },
+  {
+    "identifier": "Sita_Sings_the_Blues",
+    "title": "Sita Sings the Blues",
+    "year": 2008,
+    "genre": ["Animation", "Comedy", "Musical"],
+    "director": "Nina Paley",
+    "description": "An animated retelling of the Indian epic Ramayana interwoven with a modern breakup story, set to 1920s jazz vocals.",
+    "runtime_minutes": 82
+  },
+  {
+    "identifier": "utopia",
+    "title": "Utopia",
+    "year": 1951,
+    "genre": ["Comedy"],
+    "director": "Léo Joannon",
+    "description": "The final film Laurel and Hardy made together, about two castaways who found their own nation on a newly emerged island.",
+    "runtime_minutes": null
+  },
+  {
+    "identifier": "Killers_from_space",
+    "title": "Killers From Space",
+    "year": 1954,
+    "genre": ["Sci-Fi", "Horror"],
+    "director": "W. Lee Wilder",
+    "description": "A scientist is revived by aliens and used as a pawn in their plan to invade Earth.",
+    "runtime_minutes": null
+  },
+  {
+    "identifier": "BloodyPitOfHorror",
+    "title": "Bloody Pit of Horror",
+    "year": 1965,
+    "genre": ["Horror"],
+    "director": "Massimo Pupillo",
+    "description": "A group of models and photographers are captured and tortured by the deranged owner of an old castle.",
+    "runtime_minutes": null
+  },
+  {
+    "identifier": "Grave_of_the_Vampire_movie",
+    "title": "Grave of the Vampire",
+    "year": 1974,
+    "genre": ["Horror"],
+    "director": "John Hayes",
+    "description": "A man tracks down the vampire father who attacked his mother decades earlier.",
+    "runtime_minutes": null
+  },
+  {
+    "identifier": "VoyagetothePlanetofPrehistoricWomen",
+    "title": "Voyage to the Planet of Prehistoric Women",
+    "year": 1967,
+    "genre": ["Sci-Fi"],
+    "director": "Derek Thomas",
+    "description": "Astronauts crash on Venus and encounter its native inhabitants in this American re-edit of a Soviet science fiction film.",
+    "runtime_minutes": null
   }
 ]
