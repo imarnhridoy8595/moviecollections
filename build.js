@@ -68,7 +68,7 @@ body {
   min-height: 100vh;
 }
 a { color: inherit; }
-.wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.wrap { max-width: 1440px; margin: 0 auto; padding: 0 32px; }
 
 /* Top bar: logo + nav + search, all in one row on desktop */
 .topbar {
@@ -77,7 +77,7 @@ a { color: inherit; }
   position: sticky; top: 0; z-index: 20;
 }
 .topbar-inner {
-  max-width: 1200px; margin: 0 auto; padding: 12px 24px;
+  max-width: 1440px; margin: 0 auto; padding: 12px 32px;
   display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
 }
 .logo {
@@ -145,10 +145,11 @@ nav.crumbs a { color: var(--adc-brass-light); text-decoration: none; }
   font-size: 22px; margin: 0 0 16px; padding-left: 2px;
 }
 .shelf-row {
-  display: flex; gap: 16px; flex-wrap: wrap; padding-bottom: 10px;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 16px; padding-bottom: 10px;
 }
 .cat-card {
-  flex: 0 0 auto; width: 190px; height: 100px; border-radius: 10px;
+  height: 100px; border-radius: 10px;
   display: flex; align-items: flex-end; padding: 14px; text-decoration: none;
   position: relative; overflow: hidden; border: 1px solid rgba(200,155,60,0.25);
   background: linear-gradient(135deg, var(--cat-a, #1a2c44), var(--cat-b, #0f1c2e));
