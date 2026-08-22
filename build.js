@@ -36,11 +36,13 @@ function uniqueValues(list, getter) {
 
 // ---------- Top navigation ----------
 const NAV = [
+  { label: "Home", href: "/", type: "home" },
   { label: "Movies", href: "/movies/", type: "movie" },
   { label: "Movie Series", href: "/movie-series/", type: "series" },
   { label: "TV Shows", href: "/tv-shows/", type: "tvshow" },
   { label: "Awards & Documentaries", href: "/documentaries/", type: "documentary" },
   { label: "Others", href: "/others/", type: "other" },
+  { label: "Animations & Cartoons", href: "/animations-cartoons/", type: "animations" },
   { label: "Contact", href: "/contact/", type: null }
 ];
 
@@ -319,8 +321,8 @@ function catCard(label, href, i) {
 // ---------- Home page ----------
 function renderHome(movies) {
   const languages = ["English", "Hindi", "Korean"];
-  const collections = ["Charlie Chaplin", "IMDb Top Movies"];
-  const genres = ["Horror", "Sci-Fi", "Romantic"];
+  const collections = ["Charlie Chaplin", "Mr Bean", "IMDb Top Movies"];
+  const genres = ["Horror", "Sci-Fi", "Romantic", "Animations", "Cartoons"];
   const dataGenres = uniqueValues(movies, m => m.genre).filter(g => !genres.includes(g));
 
   const body = `<main>
@@ -345,7 +347,7 @@ function renderHome(movies) {
     </section>
   </main>`;
 
-  return pageShell({ title: `${SITE_NAME} — ${SITE_TAGLINE}`, body, movies, activeType: null });
+  return pageShell({ title: `${SITE_NAME} — ${SITE_TAGLINE}`, body, movies, activeType: "home" });
 }
 
 // ---------- Movie detail page ----------
@@ -391,7 +393,7 @@ function renderContact(movies) {
     <h2 class="section-heading">Contact</h2>
     <div class="contact-box">
       <p>Questions, requests, or a takedown concern about a title? Reach out and we'll get back to you.</p>
-      <p>Email: <a href="mailto:contact@inazira.com">contact@inazira.com</a></p>
+      <p>Email: <a href="mailto:inazira.official@gmail.com">inazira.official@gmail.com</a></p>
     </div>
   </main>`;
   return pageShell({ title: `Contact — ${SITE_NAME}`, body, movies, crumbs: `<a href="/">Home</a> / Contact` });
@@ -429,7 +431,7 @@ for (const g of uniqueValues(movies, m => m.genre)) {
     heading: g, sub: "Genre", list: movies.filter(m => m.genre.includes(g)), movies
   }));
 }
-for (const g of ["Horror", "Sci-Fi", "Romantic"]) {
+for (const g of ["Horror", "Sci-Fi", "Romantic", "Animations", "Cartoons"]) {
   const dir = `genre/${slugify(g)}`;
   if (!fs.existsSync(path.join(OUT_DIR, dir))) {
     write(dir, renderListing({ heading: g, sub: "Genre", list: movies.filter(m => m.genre.includes(g)), movies }));
@@ -455,12 +457,21 @@ for (const c of uniqueValues(movies, m => m.collections)) {
     heading: c, sub: "Collection", list: movies.filter(m => (m.collections || []).includes(c)), movies
   }));
 }
-for (const c of ["Charlie Chaplin", "IMDb Top Movies"]) {
+for (const c of ["Charlie Chaplin", "Mr Bean", "IMDb Top Movies"]) {
   const dir = `collection/${slugify(c)}`;
   if (!fs.existsSync(path.join(OUT_DIR, dir))) {
     write(dir, renderListing({ heading: c, sub: "Collection", list: movies.filter(m => (m.collections || []).includes(c)), movies }));
   }
 }
+
+// Animations & Cartoons combined nav page (covers Animations, Cartoons, and the existing Animation genre tag)
+const ANIM_TAGS = ["Animations", "Cartoons", "Animation"];
+write("animations-cartoons", renderListing({
+  heading: "Animations & Cartoons",
+  list: movies.filter(m => m.genre.some(g => ANIM_TAGS.includes(g))),
+  movies,
+  activeType: "animations"
+}));
 
 // Contact
 write("contact", renderContact(movies));
