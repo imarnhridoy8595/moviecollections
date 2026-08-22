@@ -70,34 +70,39 @@ body {
 a { color: inherit; }
 .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
-/* Top bar: logo+search row, then nav row below */
+/* Top bar: logo + nav + search, all in one row on desktop */
 .topbar {
   background: var(--adc-navy-3);
   border-bottom: 1px solid rgba(200,155,60,0.2);
   position: sticky; top: 0; z-index: 20;
 }
-.topbar-top {
-  max-width: 1200px; margin: 0 auto; padding: 14px 24px 10px;
-  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+.topbar-inner {
+  max-width: 1200px; margin: 0 auto; padding: 12px 24px;
+  display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
 }
 .logo {
-  font-family: 'Playfair Display', Georgia, serif; font-weight: 700;
-  font-size: 20px; color: var(--adc-brass-light); text-decoration: none;
-  white-space: nowrap;
+  display: flex; flex-direction: column; line-height: 1.1;
+  text-decoration: none; white-space: nowrap; order: 1;
 }
-.topbar-nav-row { border-top: 1px solid rgba(200,155,60,0.12); }
+.logo-main {
+  font-family: 'Playfair Display', Georgia, serif; font-weight: 700;
+  font-size: 19px; color: var(--adc-brass-light);
+}
+.logo-sub {
+  font-size: 10px; letter-spacing: 0.2em; color: var(--adc-muted);
+  text-transform: uppercase; margin-top: 2px;
+}
 .topnav {
-  max-width: 1200px; margin: 0 auto; padding: 10px 24px;
-  display: flex; gap: 26px; flex-wrap: wrap; justify-content: center;
+  display: flex; gap: 22px; flex-wrap: wrap; flex: 1; order: 2;
 }
 .topnav a {
   color: var(--adc-ivory); text-decoration: none; font-size: 15.5px;
   font-weight: 600; letter-spacing: 0.02em; opacity: 0.85;
-  padding: 6px 0; border-bottom: 2px solid transparent;
+  padding: 6px 0; border-bottom: 2px solid transparent; white-space: nowrap;
 }
 .topnav a:hover, .topnav a.active { opacity: 1; border-bottom-color: var(--adc-brass); }
 
-.search-wrap { position: relative; width: 190px; flex: none; }
+.search-wrap { position: relative; width: 190px; flex: none; order: 3; }
 .search-input {
   width: 100%; background: var(--adc-navy-2); border: 1px solid rgba(200,155,60,0.3);
   border-radius: 6px; padding: 8px 12px; color: var(--adc-ivory); font-size: 13.5px;
@@ -169,7 +174,7 @@ nav.crumbs a { color: var(--adc-brass-light); text-decoration: none; }
   width: 100%; aspect-ratio: 2/3; background-size: cover; background-position: center;
   background-color: var(--adc-navy-3);
 }
-.card .card-body { padding: 12px 14px; }
+.card .card-body { padding: 12px 14px; text-align: center; }
 .card .badge {
   display: inline-block; font-size: 10.5px; letter-spacing: 0.06em;
   color: var(--adc-navy); background: var(--adc-brass); border-radius: 4px;
@@ -212,9 +217,9 @@ footer.site-footer { border-top: 1px solid rgba(200,155,60,0.2); padding: 24px 0
 footer.site-footer p { color: var(--adc-muted); font-size: 12.5px; margin: 0; }
 
 @media (max-width: 640px) {
-  .topbar-top { gap: 12px; }
+  .topnav { order: 3; flex-basis: 100%; gap: 14px; justify-content: flex-start; }
   .search-wrap { width: 140px; }
-  .topnav { gap: 16px; }
+  .grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
 }
 `;
 
@@ -264,15 +269,16 @@ function pageShell({ title, body, crumbs, activeType, movies, showHeader = true 
 </head>
 <body>
 <div class="topbar">
-  <div class="topbar-top">
-    <a class="logo" href="/">INAZIRA MOVIES</a>
+  <div class="topbar-inner">
+    <a class="logo" href="/">
+      <span class="logo-main">INAZIRA</span>
+      <span class="logo-sub">MOVIES</span>
+    </a>
+    <nav class="topnav">${navHtml}</nav>
     <div class="search-wrap">
       <input class="search-input" type="text" placeholder="Search titles...">
       <div class="search-results"></div>
     </div>
-  </div>
-  <div class="topbar-nav-row">
-    <nav class="topnav">${navHtml}</nav>
   </div>
 </div>
 <div class="wrap">
