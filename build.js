@@ -93,7 +93,7 @@ a { color: inherit; }
   text-transform: uppercase; margin-top: 2px;
 }
 .topnav {
-  display: flex; gap: 22px; flex-wrap: wrap; flex: 1; order: 2;
+  display: flex; gap: 22px; flex-wrap: wrap; flex: 1; order: 2; justify-content: center;
 }
 .topnav a {
   color: var(--adc-ivory); text-decoration: none; font-size: 15.5px;
@@ -333,7 +333,7 @@ function catCard(label, href, i) {
 
 // ---------- Home page ----------
 function renderHome(movies) {
-  const languages = ["English", "Hindi", "Korean", "Bengali", "Other Languages"];
+  const languages = ["English", "Hindi", "Korean", "Bengali", "South Indian", "Other Languages"];
   const collections = ["Charlie Chaplin", "Mr Bean", "James Bond", "Sherlock Holmes", "Animations", "Cartoons", "IMDb Top Movies"];
   const genres = ["Horror", "Sci-Fi", "Romantic", "Animations", "Cartoons"];
   const dataGenres = uniqueValues(movies, m => m.genre).filter(g => !genres.includes(g));
@@ -457,7 +457,7 @@ for (const l of uniqueValues(movies, m => [m.language])) {
     heading: l, sub: "Language", list: movies.filter(m => m.language === l), movies
   }));
 }
-for (const l of ["English", "Hindi", "Korean", "Bengali", "Other Languages"]) {
+for (const l of ["English", "Hindi", "Korean", "Bengali", "South Indian", "Other Languages"]) {
   const dir = `language/${slugify(l)}`;
   if (!fs.existsSync(path.join(OUT_DIR, dir))) {
     write(dir, renderListing({ heading: l, sub: "Language", list: movies.filter(m => m.language === l), movies }));
