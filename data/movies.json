@@ -162,7 +162,7 @@
     "type": "movie",
     "language": "English",
     "genre": ["Mystery", "Crime"],
-    "collections": [],
+    "collections": ["Sherlock Holmes"],
     "director": "Roy William Neill",
     "description": "Sherlock Holmes, played by Basil Rathbone, investigates a case involving coded music boxes.",
     "runtime_minutes": null

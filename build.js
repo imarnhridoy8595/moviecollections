@@ -70,33 +70,37 @@ body {
 a { color: inherit; }
 .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
-/* Top bar: logo + nav + search */
+/* Top bar: logo+search row, then nav row below */
 .topbar {
   background: var(--adc-navy-3);
   border-bottom: 1px solid rgba(200,155,60,0.2);
   position: sticky; top: 0; z-index: 20;
 }
-.topbar-inner {
-  max-width: 1200px; margin: 0 auto; padding: 14px 24px;
-  display: flex; align-items: center; gap: 28px; flex-wrap: wrap;
+.topbar-top {
+  max-width: 1200px; margin: 0 auto; padding: 14px 24px 10px;
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
 }
 .logo {
   font-family: 'Playfair Display', Georgia, serif; font-weight: 700;
   font-size: 20px; color: var(--adc-brass-light); text-decoration: none;
   white-space: nowrap;
 }
-.topnav { display: flex; gap: 22px; flex-wrap: wrap; flex: 1; }
+.topbar-nav-row { border-top: 1px solid rgba(200,155,60,0.12); }
+.topnav {
+  max-width: 1200px; margin: 0 auto; padding: 10px 24px;
+  display: flex; gap: 26px; flex-wrap: wrap; justify-content: center;
+}
 .topnav a {
-  color: var(--adc-ivory); text-decoration: none; font-size: 14px;
+  color: var(--adc-ivory); text-decoration: none; font-size: 15.5px;
   font-weight: 600; letter-spacing: 0.02em; opacity: 0.85;
   padding: 6px 0; border-bottom: 2px solid transparent;
 }
 .topnav a:hover, .topnav a.active { opacity: 1; border-bottom-color: var(--adc-brass); }
 
-.search-wrap { position: relative; min-width: 220px; }
+.search-wrap { position: relative; width: 190px; flex: none; }
 .search-input {
   width: 100%; background: var(--adc-navy-2); border: 1px solid rgba(200,155,60,0.3);
-  border-radius: 6px; padding: 9px 14px; color: var(--adc-ivory); font-size: 14px;
+  border-radius: 6px; padding: 8px 12px; color: var(--adc-ivory); font-size: 13.5px;
 }
 .search-input::placeholder { color: var(--adc-muted); }
 .search-input:focus { outline: none; border-color: var(--adc-brass); }
@@ -136,7 +140,7 @@ nav.crumbs a { color: var(--adc-brass-light); text-decoration: none; }
   font-size: 22px; margin: 0 0 16px; padding-left: 2px;
 }
 .shelf-row {
-  display: flex; gap: 16px; overflow-x: auto; padding-bottom: 10px; scrollbar-width: thin;
+  display: flex; gap: 16px; flex-wrap: wrap; padding-bottom: 10px;
 }
 .cat-card {
   flex: 0 0 auto; width: 190px; height: 100px; border-radius: 10px;
@@ -208,9 +212,9 @@ footer.site-footer { border-top: 1px solid rgba(200,155,60,0.2); padding: 24px 0
 footer.site-footer p { color: var(--adc-muted); font-size: 12.5px; margin: 0; }
 
 @media (max-width: 640px) {
-  .topbar-inner { gap: 14px; }
-  .topnav { gap: 14px; order: 3; width: 100%; }
-  .search-wrap { flex: 1; }
+  .topbar-top { gap: 12px; }
+  .search-wrap { width: 140px; }
+  .topnav { gap: 16px; }
 }
 `;
 
@@ -260,13 +264,15 @@ function pageShell({ title, body, crumbs, activeType, movies, showHeader = true 
 </head>
 <body>
 <div class="topbar">
-  <div class="topbar-inner">
+  <div class="topbar-top">
     <a class="logo" href="/">INAZIRA MOVIES</a>
-    <nav class="topnav">${navHtml}</nav>
     <div class="search-wrap">
       <input class="search-input" type="text" placeholder="Search titles...">
       <div class="search-results"></div>
     </div>
+  </div>
+  <div class="topbar-nav-row">
+    <nav class="topnav">${navHtml}</nav>
   </div>
 </div>
 <div class="wrap">
@@ -320,8 +326,8 @@ function catCard(label, href, i) {
 
 // ---------- Home page ----------
 function renderHome(movies) {
-  const languages = ["English", "Hindi", "Korean"];
-  const collections = ["Charlie Chaplin", "Mr Bean", "IMDb Top Movies"];
+  const languages = ["English", "Hindi", "Korean", "Bengali", "Other Languages"];
+  const collections = ["Charlie Chaplin", "Mr Bean", "James Bond", "Sherlock Holmes", "Animations", "Cartoons", "IMDb Top Movies"];
   const genres = ["Horror", "Sci-Fi", "Romantic", "Animations", "Cartoons"];
   const dataGenres = uniqueValues(movies, m => m.genre).filter(g => !genres.includes(g));
 
@@ -444,7 +450,7 @@ for (const l of uniqueValues(movies, m => [m.language])) {
     heading: l, sub: "Language", list: movies.filter(m => m.language === l), movies
   }));
 }
-for (const l of ["English", "Hindi", "Korean"]) {
+for (const l of ["English", "Hindi", "Korean", "Bengali", "Other Languages"]) {
   const dir = `language/${slugify(l)}`;
   if (!fs.existsSync(path.join(OUT_DIR, dir))) {
     write(dir, renderListing({ heading: l, sub: "Language", list: movies.filter(m => m.language === l), movies }));
@@ -457,7 +463,7 @@ for (const c of uniqueValues(movies, m => m.collections)) {
     heading: c, sub: "Collection", list: movies.filter(m => (m.collections || []).includes(c)), movies
   }));
 }
-for (const c of ["Charlie Chaplin", "Mr Bean", "IMDb Top Movies"]) {
+for (const c of ["Charlie Chaplin", "Mr Bean", "James Bond", "Sherlock Holmes", "Animations", "Cartoons", "IMDb Top Movies"]) {
   const dir = `collection/${slugify(c)}`;
   if (!fs.existsSync(path.join(OUT_DIR, dir))) {
     write(dir, renderListing({ heading: c, sub: "Collection", list: movies.filter(m => (m.collections || []).includes(c)), movies }));
