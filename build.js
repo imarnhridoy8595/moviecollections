@@ -40,9 +40,9 @@ const NAV = [
   { label: "Movies", href: "/movies/", type: "movie" },
   { label: "Movie Series", href: "/movie-series/", type: "series" },
   { label: "TV Shows", href: "/tv-shows/", type: "tvshow" },
+  { label: "Animations & Cartoons", href: "/animations-cartoons/", type: "animations" },
   { label: "Awards & Documentaries", href: "/documentaries/", type: "documentary" },
   { label: "Others", href: "/others/", type: "other" },
-  { label: "Animations & Cartoons", href: "/animations-cartoons/", type: "animations" },
   { label: "Contact", href: "/contact/", type: null }
 ];
 
