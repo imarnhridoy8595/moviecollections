@@ -201,6 +201,11 @@ nav.crumbs a { color: var(--adc-brass-light); text-decoration: none; }
 .empty-note { color: var(--adc-muted); padding: 30px 0 60px; font-size: 14px; }
 
 /* Latest spotlight card */
+.latest-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  gap: 20px; margin: 20px 0 50px;
+}
+.latest-grid .latest-card { margin: 0; }
 .latest-card {
   display: grid; grid-template-columns: 220px 1fr; gap: 24px;
   background: linear-gradient(120deg, #2a1f0f, var(--adc-navy-2));
@@ -471,9 +476,9 @@ function renderMovie(m, movies) {
 // ---------- Generic listing page (type / genre / language / collection) ----------
 function renderListing({ heading, sub, list, movies, activeType, latestList, latestLabel }) {
   const body = `<main>
+    ${latestList ? latestCard(latestList, latestLabel || `Latest in ${heading}`) : ""}
     <h2 class="section-heading">${heading}</h2>
     ${sub ? `<p class="section-sub">${sub}</p>` : ""}
-    ${latestList ? latestCard(latestList, latestLabel || `Latest in ${heading}`) : ""}
     ${movieGridOrEmpty(list, "No titles here yet — check back soon, or add matching entries to data/movies.json.")}
   </main>`;
   return pageShell({ title: `${heading} — ${SITE_NAME}`, body, movies, activeType, crumbs: `<a href="/">Home</a> / ${heading}` });
@@ -481,11 +486,31 @@ function renderListing({ heading, sub, list, movies, activeType, latestList, lat
 
 // ---------- Latest Updates page (aggregates "latest" titles across every language + section) ----------
 function renderLatest(movies) {
-  const latestMovies = movies.filter(m => m.source === "trailer");
+  const trailerMovies = movies.filter(m => m.source === "trailer");
+  const byLang = (lang) => trailerMovies.filter(m => m.language === lang);
+  const animTags = ["Animations", "Cartoons", "Animation"];
+
+  const sections = [
+    { label: "Latest in English", list: byLang("English") },
+    { label: "Latest in Hindi", list: byLang("Hindi") },
+    { label: "Latest in Korean", list: byLang("Korean") },
+    { label: "Latest in Bengali", list: byLang("Bengali") },
+    { label: "Latest in South Indian", list: byLang("South Indian") },
+    { label: "Latest in Other Languages", list: byLang("Other Languages") },
+    { label: "Latest in Movie Series", list: trailerMovies.filter(m => m.type === "series") },
+    { label: "Latest in TV Shows", list: trailerMovies.filter(m => m.type === "tvshow") },
+    { label: "Latest in Animations and Cartoons", list: trailerMovies.filter(m => m.genre.some(g => animTags.includes(g))) },
+    { label: "Latest in Awards and Documentaries", list: trailerMovies.filter(m => m.type === "documentary") }
+  ];
+
   const body = `<main>
-    <h2 class="section-heading">Latest Updates</h2>
-    <p class="section-sub">Newest additions across every language and section.</p>
-    ${movieGridOrEmpty(latestMovies, "Nothing marked as latest yet — set \"latest\": true on entries in data/movies.json to feature them here.")}
+    <div style="text-align:center;">
+      <h2 class="section-heading" style="margin-bottom:4px;">Latest Updates</h2>
+      <p class="section-sub">Newest additions across every language and section.</p>
+    </div>
+    <div class="latest-grid">
+      ${sections.map(s => latestCard(s.list, s.label)).join("\n")}
+    </div>
   </main>`;
   return pageShell({ title: `Latest Updates — ${SITE_NAME}`, body, movies, activeType: "latest", crumbs: `<a href="/">Home</a> / Latest Updates` });
 }
