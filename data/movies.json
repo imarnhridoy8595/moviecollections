@@ -6,7 +6,7 @@
     "type": "movie",
     "language": "English",
     "genre": ["Comedy", "Drama"],
-    "collections": ["IMDb Top Movies"],
+    "collections": ["Critically Acclaimed"],
     "director": "Howard Hawks",
     "description": "A newspaper editor tries to win back his ex-wife and star reporter for one last big story, starring Cary Grant and Rosalind Russell.",
     "runtime_minutes": 92
@@ -30,7 +30,7 @@
     "type": "movie",
     "language": "English",
     "genre": ["Horror", "Silent"],
-    "collections": ["IMDb Top Movies"],
+    "collections": ["Critically Acclaimed"],
     "director": "Rupert Julian",
     "description": "A mysterious masked phantom haunts the Paris Opera and becomes obsessed with a young singer.",
     "runtime_minutes": null
@@ -42,7 +42,7 @@
     "type": "movie",
     "language": "English",
     "genre": ["Horror", "Silent"],
-    "collections": ["IMDb Top Movies"],
+    "collections": ["Critically Acclaimed"],
     "director": "Robert Wiene",
     "description": "A landmark German expressionist horror film about a hypnotist and his sleepwalking subject, told through a framed narrative.",
     "runtime_minutes": null

@@ -334,7 +334,7 @@ function catCard(label, href, i) {
 // ---------- Home page ----------
 function renderHome(movies) {
   const languages = ["English", "Hindi", "Korean", "Bengali", "South Indian", "Other Languages"];
-  const collections = ["Charlie Chaplin", "Mr Bean", "James Bond", "Sherlock Holmes", "Animations", "Cartoons", "IMDb Top Movies"];
+  const collections = ["Charlie Chaplin", "Mr Bean", "James Bond", "Sherlock Holmes", "Animations", "Cartoons", "Critically Acclaimed"];
   const genres = ["Horror", "Sci-Fi", "Romantic", "Animations", "Cartoons"];
   const dataGenres = uniqueValues(movies, m => m.genre).filter(g => !genres.includes(g));
 
@@ -470,7 +470,7 @@ for (const c of uniqueValues(movies, m => m.collections)) {
     heading: c, sub: "Collection", list: movies.filter(m => (m.collections || []).includes(c)), movies
   }));
 }
-for (const c of ["Charlie Chaplin", "Mr Bean", "James Bond", "Sherlock Holmes", "Animations", "Cartoons", "IMDb Top Movies"]) {
+for (const c of ["Charlie Chaplin", "Mr Bean", "James Bond", "Sherlock Holmes", "Animations", "Cartoons", "Critically Acclaimed"]) {
   const dir = `collection/${slugify(c)}`;
   if (!fs.existsSync(path.join(OUT_DIR, dir))) {
     write(dir, renderListing({ heading: c, sub: "Collection", list: movies.filter(m => (m.collections || []).includes(c)), movies }));
