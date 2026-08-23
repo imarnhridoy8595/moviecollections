@@ -489,9 +489,9 @@ function renderMovie(m, movies) {
 }
 
 // ---------- Generic listing page (type / genre / language / collection) ----------
-function renderListing({ heading, sub, list, movies, activeType, latestList, latestLabel }) {
+function renderListing({ heading, sub, list, movies, activeType, latestHref, latestLabel }) {
   const body = `<main>
-    ${latestList ? latestCard(latestList, latestLabel || `Latest in ${heading}`) : ""}
+    ${latestHref ? latestNavCard(latestLabel || `Latest in ${heading}`, latestHref) : ""}
     <h2 class="section-heading">${heading}</h2>
     ${sub ? `<p class="section-sub">${sub}</p>` : ""}
     ${movieGridOrEmpty(list, "No titles here yet — check back soon, or add matching entries to data/movies.json.")}
@@ -577,21 +577,31 @@ for (const g of ["Horror", "Sci-Fi", "Romantic", "Animations", "Cartoons"]) {
   }
 }
 
-// Language pages
+// Language pages, each with a dedicated "Latest in <language>" sub-page
 for (const l of uniqueValues(movies, m => [m.language])) {
   const langMovies = movies.filter(m => m.language === l);
+  const latestHref = `/language/${slugify(l)}/latest/`;
   write(`language/${slugify(l)}`, renderListing({
     heading: l, sub: "Language", list: langMovies, movies,
-    latestList: langMovies.filter(m => m.source === "trailer"), latestLabel: `Latest in ${l}`
+    latestHref, latestLabel: `Latest in ${l}`
+  }));
+  write(`language/${slugify(l)}/latest`, renderListing({
+    heading: `Latest in ${l}`, sub: "Modern releases (2010–2026), trailer only",
+    list: langMovies.filter(m => m.source === "trailer"), movies
   }));
 }
 for (const l of ["English", "Hindi", "Korean", "Bengali", "South Indian", "Other Languages"]) {
   const dir = `language/${slugify(l)}`;
   if (!fs.existsSync(path.join(OUT_DIR, dir))) {
     const langMovies = movies.filter(m => m.language === l);
+    const latestHref = `/language/${slugify(l)}/latest/`;
     write(dir, renderListing({
       heading: l, sub: "Language", list: langMovies, movies,
-      latestList: langMovies.filter(m => m.source === "trailer"), latestLabel: `Latest in ${l}`
+      latestHref, latestLabel: `Latest in ${l}`
+    }));
+    write(`${dir}/latest`, renderListing({
+      heading: `Latest in ${l}`, sub: "Modern releases (2010–2026), trailer only",
+      list: langMovies.filter(m => m.source === "trailer"), movies
     }));
   }
 }
