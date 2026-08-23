@@ -205,6 +205,14 @@ nav.crumbs a { color: var(--adc-brass-light); text-decoration: none; }
   display: grid; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
   gap: 20px; margin: 20px 0 50px;
 }
+.latest-nav-card {
+  display: block; text-decoration: none;
+  background: linear-gradient(120deg, #2a1f0f, var(--adc-navy-2));
+  border: 1px solid rgba(200,155,60,0.35); border-radius: 14px;
+  padding: 26px; transition: transform 0.15s ease, border-color 0.15s ease;
+}
+.latest-nav-card:hover { transform: translateY(-3px); border-color: var(--adc-brass); }
+.latest-nav-card h2 { font-family: 'Playfair Display', Georgia, serif; color: var(--adc-brass-light); font-size: 22px; margin: 0; }
 .latest-grid .latest-card { margin: 0; }
 .latest-card {
   display: grid; grid-template-columns: 220px 1fr; gap: 24px;
@@ -351,6 +359,13 @@ ${searchScript(movies)}
 </html>`;
 }
 
+function latestNavCard(label, href) {
+  return `<a class="latest-nav-card" href="${href}">
+    <span class="latest-badge">Latest</span>
+    <h2>${label}</h2>
+  </a>`;
+}
+
 function latestCard(list, label) {
   if (!list.length) {
     return `<div class="latest-card"><div><span class="latest-badge">Latest</span><h2>${label}</h2><p class="latest-empty">No modern (2010–2026) titles added yet — add an entry with "source": "trailer" in data/movies.json to feature it here.</p></div></div>`;
@@ -486,21 +501,17 @@ function renderListing({ heading, sub, list, movies, activeType, latestList, lat
 
 // ---------- Latest Updates page (aggregates "latest" titles across every language + section) ----------
 function renderLatest(movies) {
-  const trailerMovies = movies.filter(m => m.source === "trailer");
-  const byLang = (lang) => trailerMovies.filter(m => m.language === lang);
-  const animTags = ["Animations", "Cartoons", "Animation"];
-
   const sections = [
-    { label: "Latest in English", list: byLang("English") },
-    { label: "Latest in Hindi", list: byLang("Hindi") },
-    { label: "Latest in Korean", list: byLang("Korean") },
-    { label: "Latest in Bengali", list: byLang("Bengali") },
-    { label: "Latest in South Indian", list: byLang("South Indian") },
-    { label: "Latest in Other Languages", list: byLang("Other Languages") },
-    { label: "Latest in Movie Series", list: trailerMovies.filter(m => m.type === "series") },
-    { label: "Latest in TV Shows", list: trailerMovies.filter(m => m.type === "tvshow") },
-    { label: "Latest in Animations and Cartoons", list: trailerMovies.filter(m => m.genre.some(g => animTags.includes(g))) },
-    { label: "Latest in Awards and Documentaries", list: trailerMovies.filter(m => m.type === "documentary") }
+    { label: "Latest in English", href: "/language/english/" },
+    { label: "Latest in Hindi", href: "/language/hindi/" },
+    { label: "Latest in Korean", href: "/language/korean/" },
+    { label: "Latest in Bengali", href: "/language/bengali/" },
+    { label: "Latest in South Indian", href: "/language/south-indian/" },
+    { label: "Latest in Other Languages", href: "/language/other-languages/" },
+    { label: "Latest in Movie Series", href: "/movie-series/" },
+    { label: "Latest in TV Shows", href: "/tv-shows/" },
+    { label: "Latest in Animations and Cartoons", href: "/animations-cartoons/" },
+    { label: "Latest in Awards and Documentaries", href: "/documentaries/" }
   ];
 
   const body = `<main>
@@ -509,7 +520,7 @@ function renderLatest(movies) {
       <p class="section-sub">Newest additions across every language and section.</p>
     </div>
     <div class="latest-grid">
-      ${sections.map(s => latestCard(s.list, s.label)).join("\n")}
+      ${sections.map(s => latestNavCard(s.label, s.href)).join("\n")}
     </div>
   </main>`;
   return pageShell({ title: `Latest Updates — ${SITE_NAME}`, body, movies, activeType: "latest", crumbs: `<a href="/">Home</a> / Latest Updates` });
