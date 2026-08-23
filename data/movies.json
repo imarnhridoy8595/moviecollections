@@ -370,5 +370,101 @@
     "director": "Fleischer Studios / Famous Studios",
     "description": "A collection of classic Popeye the Sailor cartoon shorts that have fallen into the public domain.",
     "runtime_minutes": null
+  },
+  {
+    "identifier": "gov.archives.arc.35924.b",
+    "title": "Let There Be Light",
+    "year": 1946,
+    "type": "documentary",
+    "language": "English",
+    "genre": ["Documentary", "War"],
+    "collections": [],
+    "director": "John Huston",
+    "description": "A U.S. Army documentary following the treatment of soldiers with combat-related psychological trauma, suppressed by the government for decades before its public release.",
+    "runtime_minutes": 58
+  },
+  {
+    "identifier": "DragnetTheBigLamp",
+    "title": "Dragnet: The Big Lamp",
+    "year": 1954,
+    "type": "tvshow",
+    "language": "English",
+    "genre": ["Crime", "Drama"],
+    "collections": [],
+    "director": "Jack Webb",
+    "description": "An episode of the classic 1950s police procedural series following Sergeant Joe Friday investigating a case in his signature just-the-facts style.",
+    "runtime_minutes": 26
+  },
+  {
+    "identifier": "angel_and_the_badman",
+    "title": "Angel and the Badman",
+    "year": 1947,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Western", "Romantic"],
+    "collections": [],
+    "director": "James Edward Grant",
+    "description": "A wounded outlaw is taken in and nursed back to health by a Quaker family, and finds himself torn between his violent past and a newfound love, starring John Wayne.",
+    "runtime_minutes": 100
+  },
+  {
+    "identifier": "PimpernelSmith",
+    "title": "\"Pimpernel\" Smith",
+    "year": 1941,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Adventure", "Thriller"],
+    "collections": [],
+    "director": "Leslie Howard",
+    "description": "An English archaeologist secretly smuggles refugees out of Nazi Germany, updating the classic Scarlet Pimpernel adventure story to World War II.",
+    "runtime_minutes": 120
+  },
+  {
+    "identifier": "TheGeneral",
+    "title": "The General",
+    "year": 1926,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Comedy", "Adventure", "Silent"],
+    "collections": [],
+    "director": "Buster Keaton",
+    "description": "A train engineer sets off on a one-man mission to recover his stolen locomotive after it's commandeered by enemy spies during the Civil War, in this classic silent action-comedy.",
+    "runtime_minutes": 78
+  },
+  {
+    "identifier": "OneWeek",
+    "title": "One Week",
+    "year": 1920,
+    "type": "other",
+    "language": "English",
+    "genre": ["Comedy", "Silent"],
+    "collections": [],
+    "director": "Buster Keaton",
+    "description": "A newlywed couple attempts to assemble a build-it-yourself portable house in a week, with increasingly chaotic results, in this landmark silent comedy short.",
+    "runtime_minutes": 19
+  },
+  {
+    "identifier": "Metropolis1927EnglishVersion",
+    "title": "Metropolis",
+    "year": 1927,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Sci-Fi", "Drama", "Silent"],
+    "collections": [],
+    "director": "Fritz Lang",
+    "description": "In a futuristic city sharply divided between wealthy planners and an exploited underground working class, the mastermind's son falls for a woman from the labor movement, setting off a struggle that threatens the entire social order.",
+    "runtime_minutes": null
+  },
+  {
+    "identifier": "Nosferatu1922",
+    "title": "Nosferatu",
+    "year": 1922,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Horror", "Silent"],
+    "collections": [],
+    "director": "F.W. Murnau",
+    "description": "An unauthorized silent adaptation of Dracula, in which a real estate agent's business trip to a mysterious count's castle unleashes a plague-bearing vampire on his hometown.",
+    "runtime_minutes": null
   }
 ]
