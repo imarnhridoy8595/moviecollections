@@ -502,16 +502,16 @@ function renderListing({ heading, sub, list, movies, activeType, latestHref, lat
 // ---------- Latest Updates page (aggregates "latest" titles across every language + section) ----------
 function renderLatest(movies) {
   const sections = [
-    { label: "Latest in English", href: "/language/english/" },
-    { label: "Latest in Hindi", href: "/language/hindi/" },
-    { label: "Latest in Korean", href: "/language/korean/" },
-    { label: "Latest in Bengali", href: "/language/bengali/" },
-    { label: "Latest in South Indian", href: "/language/south-indian/" },
-    { label: "Latest in Other Languages", href: "/language/other-languages/" },
-    { label: "Latest in Movie Series", href: "/movie-series/" },
-    { label: "Latest in TV Shows", href: "/tv-shows/" },
-    { label: "Latest in Animations and Cartoons", href: "/animations-cartoons/" },
-    { label: "Latest in Awards and Documentaries", href: "/documentaries/" }
+    { label: "Latest in English", href: "/language/english/latest/" },
+    { label: "Latest in Hindi", href: "/language/hindi/latest/" },
+    { label: "Latest in Korean", href: "/language/korean/latest/" },
+    { label: "Latest in Bengali", href: "/language/bengali/latest/" },
+    { label: "Latest in South Indian", href: "/language/south-indian/latest/" },
+    { label: "Latest in Other Languages", href: "/language/other-languages/latest/" },
+    { label: "Latest in Movie Series", href: "/movie-series/latest/" },
+    { label: "Latest in TV Shows", href: "/tv-shows/latest/" },
+    { label: "Latest in Animations and Cartoons", href: "/animations-cartoons/latest/" },
+    { label: "Latest in Awards and Documentaries", href: "/documentaries/latest/" }
   ];
 
   const body = `<main>
@@ -560,6 +560,10 @@ const TYPE_PATHS = { series: "movie-series", tvshow: "tv-shows", documentary: "d
 for (const [type, label] of Object.entries(TYPE_LABELS)) {
   const list = movies.filter(m => m.type === type);
   write(TYPE_PATHS[type], renderListing({ heading: label, list, movies, activeType: type }));
+  write(`${TYPE_PATHS[type]}/latest`, renderListing({
+    heading: `Latest in ${label}`, sub: "Modern releases (2010–2026), trailer only",
+    list: list.filter(m => m.source === "trailer"), movies
+  }));
 }
 // /movies/ index (the nav link) — lists type=movie titles; individual films live at /movies/<slug>/
 write("movies", renderListing({ heading: "Movies", list: movies.filter(m => m.type === "movie"), movies, activeType: "movie" }));
@@ -624,11 +628,16 @@ for (const c of ["Charlie Chaplin", "Mr Bean", "James Bond", "Sherlock Holmes", 
 
 // Animations & Cartoons combined nav page (covers Animations, Cartoons, and the existing Animation genre tag)
 const ANIM_TAGS = ["Animations", "Cartoons", "Animation"];
+const animMovies = movies.filter(m => m.genre.some(g => ANIM_TAGS.includes(g)));
 write("animations-cartoons", renderListing({
   heading: "Animations & Cartoons",
-  list: movies.filter(m => m.genre.some(g => ANIM_TAGS.includes(g))),
+  list: animMovies,
   movies,
   activeType: "animations"
+}));
+write("animations-cartoons/latest", renderListing({
+  heading: "Latest in Animations and Cartoons", sub: "Modern releases (2010–2026), trailer only",
+  list: animMovies.filter(m => m.source === "trailer"), movies
 }));
 
 // Contact
