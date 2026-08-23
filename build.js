@@ -17,6 +17,8 @@ const movies = raw.map(m => ({
   type: "movie",          // movie | series | tvshow | documentary | other
   language: "English",
   collections: [],
+  source: "archive",      // "archive" = hosted/streamed from Internet Archive (public domain)
+                           // "trailer" = modern film (2010+), trailer-only, links out to watch elsewhere
   ...m,
   genre: m.genre || []
 }));
@@ -26,6 +28,12 @@ function slugify(str) {
 }
 function posterUrl(identifier) {
   return `https://archive.org/services/img/${identifier}`;
+}
+function moviePoster(m) {
+  if (m.source === "trailer" && m.trailerYoutubeId) {
+    return `https://img.youtube.com/vi/${m.trailerYoutubeId}/hqdefault.jpg`;
+  }
+  return posterUrl(m.identifier);
 }
 function uniqueValues(list, getter) {
   const set = new Set();
@@ -37,6 +45,7 @@ function uniqueValues(list, getter) {
 // ---------- Top navigation ----------
 const NAV = [
   { label: "Home", href: "/", type: "home" },
+  { label: "Latest Updates", href: "/latest/", type: "latest" },
   { label: "Movies", href: "/movies/", type: "movie" },
   { label: "Movie Series", href: "/movie-series/", type: "series" },
   { label: "TV Shows", href: "/tv-shows/", type: "tvshow" },
@@ -191,6 +200,30 @@ nav.crumbs a { color: var(--adc-brass-light); text-decoration: none; }
 .section-sub { color: var(--adc-muted); font-size: 14px; margin: 0 0 10px; }
 .empty-note { color: var(--adc-muted); padding: 30px 0 60px; font-size: 14px; }
 
+/* Latest spotlight card */
+.latest-card {
+  display: grid; grid-template-columns: 220px 1fr; gap: 24px;
+  background: linear-gradient(120deg, #2a1f0f, var(--adc-navy-2));
+  border: 1px solid rgba(200,155,60,0.35); border-radius: 14px;
+  padding: 22px; margin: 18px 0 34px; align-items: center;
+}
+.latest-card .latest-badge {
+  display: inline-block; font-size: 11px; letter-spacing: 0.1em;
+  color: var(--adc-navy); background: var(--adc-brass); border-radius: 4px;
+  padding: 3px 10px; margin-bottom: 10px; text-transform: uppercase; font-weight: 700;
+}
+.latest-card h2 { font-family: 'Playfair Display', Georgia, serif; color: var(--adc-brass-light); font-size: 24px; margin: 0 0 10px; }
+.latest-card .latest-posters { display: flex; gap: 10px; }
+.latest-card .latest-posters a { display: block; flex: 0 0 auto; width: 70px; aspect-ratio: 2/3; border-radius: 6px; overflow: hidden; border: 1px solid rgba(200,155,60,0.3); }
+.latest-card .latest-posters img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.latest-card .latest-list { display: flex; flex-direction: column; gap: 6px; }
+.latest-card .latest-list a { color: var(--adc-ivory); text-decoration: none; font-size: 14px; }
+.latest-card .latest-list a:hover { color: var(--adc-brass-light); }
+.latest-empty { color: var(--adc-muted); font-size: 13px; }
+@media (max-width: 640px) {
+  .latest-card { grid-template-columns: 1fr; }
+}
+
 /* Detail page */
 .detail { padding: 24px 0 60px; }
 .detail .badge {
@@ -198,6 +231,7 @@ nav.crumbs a { color: var(--adc-brass-light); text-decoration: none; }
   color: var(--adc-navy); background: var(--adc-brass); border-radius: 4px;
   padding: 3px 10px; margin-bottom: 14px; text-transform: uppercase;
 }
+.detail .badge.trailer-badge { background: var(--adc-teal); color: #fff; margin-left: 8px; }
 .detail h1 { font-family: 'Playfair Display', Georgia, serif; color: var(--adc-brass-light); font-size: 34px; margin: 0 0 8px; }
 .detail .meta-row { color: var(--adc-muted); font-size: 14px; margin-bottom: 22px; }
 .player { position: relative; padding-top: 56.25%; margin-bottom: 24px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(200,155,60,0.25); }
@@ -312,12 +346,32 @@ ${searchScript(movies)}
 </html>`;
 }
 
+function latestCard(list, label) {
+  if (!list.length) {
+    return `<div class="latest-card"><div><span class="latest-badge">Latest</span><h2>${label}</h2><p class="latest-empty">No modern (2010–2026) titles added yet — add an entry with "source": "trailer" in data/movies.json to feature it here.</p></div></div>`;
+  }
+  const posters = list.slice(0, 4).map(m =>
+    `<a href="/movies/${slugify(m.title)}/"><img src="${moviePoster(m)}" alt="${m.title}"></a>`
+  ).join("");
+  const links = list.slice(0, 6).map(m =>
+    `<a href="/movies/${slugify(m.title)}/">${m.title}${m.year ? ` (${m.year})` : ""}</a>`
+  ).join("");
+  return `<div class="latest-card">
+    <div class="latest-posters">${posters}</div>
+    <div>
+      <span class="latest-badge">Latest</span>
+      <h2>${label}</h2>
+      <div class="latest-list">${links}</div>
+    </div>
+  </div>`;
+}
+
 // ---------- Reusable: poster card ----------
 function movieCard(m) {
   return `<a class="card" href="/movies/${slugify(m.title)}/">
-    <div class="poster" style="background-image:url('${posterUrl(m.identifier)}')"></div>
+    <div class="poster" style="background-image:url('${moviePoster(m)}')"></div>
     <div class="card-body">
-      <span class="badge">${m.genre[0] || m.type}</span>
+      <span class="badge">${m.source === "trailer" ? "Trailer" : (m.genre[0] || m.type)}</span>
       <h3>${m.title}</h3>
       <p class="meta">${m.year || ""}</p>
     </div>
@@ -373,21 +427,37 @@ function renderHome(movies) {
 
 // ---------- Movie detail page ----------
 function renderMovie(m, movies) {
-  const embedUrl = `https://archive.org/embed/${m.identifier}`;
-  const detailsUrl = `https://archive.org/details/${m.identifier}`;
-  const downloadUrl = `https://archive.org/download/${m.identifier}`;
+  const isTrailer = m.source === "trailer";
+
+  let mediaBlock, actionsBlock, noteBlock;
+  if (isTrailer) {
+    const watchSearchUrl = `https://www.imdb.com/find/?q=${encodeURIComponent(m.title)}`;
+    mediaBlock = `<div class="player"><iframe src="https://www.youtube.com/embed/${m.trailerYoutubeId}" allowfullscreen></iframe></div>`;
+    actionsBlock = `<div class="actions">
+      <a class="btn secondary" href="${watchSearchUrl}" target="_blank" rel="noopener">Find where to watch</a>
+    </div>`;
+    noteBlock = `<p class="source-note">Official trailer only — this is a modern release still under copyright, so the full film isn't hosted or downloadable here. Use the link above to find legal streaming or rental options.</p>`;
+  } else {
+    const embedUrl = `https://archive.org/embed/${m.identifier}`;
+    const detailsUrl = `https://archive.org/details/${m.identifier}`;
+    const downloadUrl = `https://archive.org/download/${m.identifier}`;
+    mediaBlock = `<div class="player"><iframe src="${embedUrl}" allowfullscreen></iframe></div>`;
+    actionsBlock = `<div class="actions">
+      <a class="btn" href="${downloadUrl}" target="_blank" rel="noopener">Download on Archive.org</a>
+      <a class="btn secondary" href="${detailsUrl}" target="_blank" rel="noopener">View source page</a>
+    </div>`;
+    noteBlock = `<p class="source-note">Hosted and streamed directly from the Internet Archive (archive.org), identifier: <code>${m.identifier}</code>. This title is in the public domain or released under an open license — verify status on the source page before relying on it for redistribution.</p>`;
+  }
 
   const body = `<main class="detail">
     <span class="badge">${m.genre.join(" / ") || m.type}</span>
+    ${isTrailer ? `<span class="badge trailer-badge">Trailer Only</span>` : ""}
     <h1>${m.title}</h1>
     <p class="meta-row">${m.year || ""} &middot; Directed by ${m.director} &middot; ${m.runtime_minutes ? m.runtime_minutes + " min" : ""} &middot; ${m.language}</p>
-    <div class="player"><iframe src="${embedUrl}" allowfullscreen></iframe></div>
+    ${mediaBlock}
     <p class="desc">${m.description || ""}</p>
-    <div class="actions">
-      <a class="btn" href="${downloadUrl}" target="_blank" rel="noopener">Download on Archive.org</a>
-      <a class="btn secondary" href="${detailsUrl}" target="_blank" rel="noopener">View source page</a>
-    </div>
-    <p class="source-note">Hosted and streamed directly from the Internet Archive (archive.org), identifier: <code>${m.identifier}</code>. This title is in the public domain or released under an open license — verify status on the source page before relying on it for redistribution.</p>
+    ${actionsBlock}
+    ${noteBlock}
   </main>`;
 
   return pageShell({
@@ -399,13 +469,25 @@ function renderMovie(m, movies) {
 }
 
 // ---------- Generic listing page (type / genre / language / collection) ----------
-function renderListing({ heading, sub, list, movies, activeType }) {
+function renderListing({ heading, sub, list, movies, activeType, latestList, latestLabel }) {
   const body = `<main>
     <h2 class="section-heading">${heading}</h2>
     ${sub ? `<p class="section-sub">${sub}</p>` : ""}
+    ${latestList ? latestCard(latestList, latestLabel || `Latest in ${heading}`) : ""}
     ${movieGridOrEmpty(list, "No titles here yet — check back soon, or add matching entries to data/movies.json.")}
   </main>`;
   return pageShell({ title: `${heading} — ${SITE_NAME}`, body, movies, activeType, crumbs: `<a href="/">Home</a> / ${heading}` });
+}
+
+// ---------- Latest Updates page (aggregates "latest" titles across every language + section) ----------
+function renderLatest(movies) {
+  const latestMovies = movies.filter(m => m.source === "trailer");
+  const body = `<main>
+    <h2 class="section-heading">Latest Updates</h2>
+    <p class="section-sub">Newest additions across every language and section.</p>
+    ${movieGridOrEmpty(latestMovies, "Nothing marked as latest yet — set \"latest\": true on entries in data/movies.json to feature them here.")}
+  </main>`;
+  return pageShell({ title: `Latest Updates — ${SITE_NAME}`, body, movies, activeType: "latest", crumbs: `<a href="/">Home</a> / Latest Updates` });
 }
 
 // ---------- Contact page ----------
@@ -461,16 +543,25 @@ for (const g of ["Horror", "Sci-Fi", "Romantic", "Animations", "Cartoons"]) {
 
 // Language pages
 for (const l of uniqueValues(movies, m => [m.language])) {
+  const langMovies = movies.filter(m => m.language === l);
   write(`language/${slugify(l)}`, renderListing({
-    heading: l, sub: "Language", list: movies.filter(m => m.language === l), movies
+    heading: l, sub: "Language", list: langMovies, movies,
+    latestList: langMovies.filter(m => m.source === "trailer"), latestLabel: `Latest in ${l}`
   }));
 }
 for (const l of ["English", "Hindi", "Korean", "Bengali", "South Indian", "Other Languages"]) {
   const dir = `language/${slugify(l)}`;
   if (!fs.existsSync(path.join(OUT_DIR, dir))) {
-    write(dir, renderListing({ heading: l, sub: "Language", list: movies.filter(m => m.language === l), movies }));
+    const langMovies = movies.filter(m => m.language === l);
+    write(dir, renderListing({
+      heading: l, sub: "Language", list: langMovies, movies,
+      latestList: langMovies.filter(m => m.source === "trailer"), latestLabel: `Latest in ${l}`
+    }));
   }
 }
+
+// Latest Updates page (aggregates every "latest"-flagged title across all languages/sections)
+write("latest", renderLatest(movies));
 
 // Collection pages
 for (const c of uniqueValues(movies, m => m.collections)) {

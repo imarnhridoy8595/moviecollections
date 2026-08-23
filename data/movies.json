@@ -5,8 +5,13 @@
     "year": 1940,
     "type": "movie",
     "language": "English",
-    "genre": ["Comedy", "Drama"],
-    "collections": ["Critically Acclaimed"],
+    "genre": [
+      "Comedy",
+      "Drama"
+    ],
+    "collections": [
+      "Critically Acclaimed"
+    ],
     "director": "Howard Hawks",
     "description": "A newspaper editor tries to win back his ex-wife and star reporter for one last big story, starring Cary Grant and Rosalind Russell.",
     "runtime_minutes": 92
@@ -17,7 +22,10 @@
     "year": 1930,
     "type": "movie",
     "language": "English",
-    "genre": ["Biography", "Drama"],
+    "genre": [
+      "Biography",
+      "Drama"
+    ],
     "collections": [],
     "director": "D.W. Griffith",
     "description": "A biography of the sixteenth U.S. president, directed by D.W. Griffith.",
@@ -29,8 +37,13 @@
     "year": 1925,
     "type": "movie",
     "language": "English",
-    "genre": ["Horror", "Silent"],
-    "collections": ["Critically Acclaimed"],
+    "genre": [
+      "Horror",
+      "Silent"
+    ],
+    "collections": [
+      "Critically Acclaimed"
+    ],
     "director": "Rupert Julian",
     "description": "A mysterious masked phantom haunts the Paris Opera and becomes obsessed with a young singer.",
     "runtime_minutes": null
@@ -41,8 +54,13 @@
     "year": 1919,
     "type": "movie",
     "language": "English",
-    "genre": ["Horror", "Silent"],
-    "collections": ["Critically Acclaimed"],
+    "genre": [
+      "Horror",
+      "Silent"
+    ],
+    "collections": [
+      "Critically Acclaimed"
+    ],
     "director": "Robert Wiene",
     "description": "A landmark German expressionist horror film about a hypnotist and his sleepwalking subject, told through a framed narrative.",
     "runtime_minutes": null
@@ -53,7 +71,11 @@
     "year": 1916,
     "type": "movie",
     "language": "English",
-    "genre": ["Adventure", "Sci-Fi", "Silent"],
+    "genre": [
+      "Adventure",
+      "Sci-Fi",
+      "Silent"
+    ],
     "collections": [],
     "director": "Stuart Paton",
     "description": "An early special-effects-driven silent adaptation of Jules Verne's classic undersea adventure novel.",
@@ -65,7 +87,11 @@
     "year": 1925,
     "type": "movie",
     "language": "English",
-    "genre": ["Adventure", "Sci-Fi", "Silent"],
+    "genre": [
+      "Adventure",
+      "Sci-Fi",
+      "Silent"
+    ],
     "collections": [],
     "director": "Harry O. Hoyt",
     "description": "The first film adaptation of Arthur Conan Doyle's novel about explorers discovering a plateau where dinosaurs still roam.",
@@ -77,7 +103,11 @@
     "year": 1939,
     "type": "movie",
     "language": "English",
-    "genre": ["Animation", "Fantasy", "Family"],
+    "genre": [
+      "Animation",
+      "Fantasy",
+      "Family"
+    ],
     "collections": [],
     "director": "Max Fleischer",
     "description": "An animated adaptation of the classic Jonathan Swift tale of a shipwrecked sailor among the tiny people of Lilliput.",
@@ -89,7 +119,10 @@
     "year": 1942,
     "type": "movie",
     "language": "English",
-    "genre": ["Adventure", "Family"],
+    "genre": [
+      "Adventure",
+      "Family"
+    ],
     "collections": [],
     "director": "Zoltan Korda",
     "description": "A boy raised by wolves in the Indian jungle is adopted by a village, based on Rudyard Kipling's stories.",
@@ -101,7 +134,10 @@
     "year": 1963,
     "type": "movie",
     "language": "English",
-    "genre": ["Comedy", "Western"],
+    "genre": [
+      "Comedy",
+      "Western"
+    ],
     "collections": [],
     "director": "Andrew V. McLaglen",
     "description": "A John Wayne comedy-western about a wealthy rancher navigating his estranged wife's return and town politics.",
@@ -113,7 +149,11 @@
     "year": 1947,
     "type": "movie",
     "language": "English",
-    "genre": ["Comedy", "Mystery", "Romantic"],
+    "genre": [
+      "Comedy",
+      "Mystery",
+      "Romantic"
+    ],
     "collections": [],
     "director": "Elliott Nugent",
     "description": "A baby photographer mistaken for a detective gets tangled up in a real crime, starring Bob Hope and Dorothy Lamour.",
@@ -125,7 +165,10 @@
     "year": 1959,
     "type": "movie",
     "language": "English",
-    "genre": ["Horror", "Mystery"],
+    "genre": [
+      "Horror",
+      "Mystery"
+    ],
     "collections": [],
     "director": "William Castle",
     "description": "An eccentric millionaire offers five strangers a large reward for surviving one night in a haunted mansion.",
@@ -137,7 +180,10 @@
     "year": 1954,
     "type": "movie",
     "language": "English",
-    "genre": ["Thriller", "Film-Noir"],
+    "genre": [
+      "Thriller",
+      "Film-Noir"
+    ],
     "collections": [],
     "director": "Lewis Allen",
     "description": "Hired assassins take a family hostage in their home while waiting to carry out a plot against the President, starring Frank Sinatra.",
@@ -149,7 +195,10 @@
     "year": 1946,
     "type": "movie",
     "language": "English",
-    "genre": ["Thriller", "Film-Noir"],
+    "genre": [
+      "Thriller",
+      "Film-Noir"
+    ],
     "collections": [],
     "director": "Orson Welles",
     "description": "A war crimes investigator tracks a Nazi fugitive hiding under a false identity in a quiet Connecticut town.",
@@ -161,8 +210,15 @@
     "year": 1946,
     "type": "series",
     "language": "English",
-    "genre": ["Mystery", "Crime", "Thriller", "Detective"],
-    "collections": ["Sherlock Holmes"],
+    "genre": [
+      "Mystery",
+      "Crime",
+      "Thriller",
+      "Detective"
+    ],
+    "collections": [
+      "Sherlock Holmes"
+    ],
     "director": "Roy William Neill",
     "description": "Sherlock Holmes, played by Basil Rathbone, investigates a case involving coded music boxes.",
     "runtime_minutes": null
@@ -173,7 +229,9 @@
     "year": 1938,
     "type": "movie",
     "language": "English",
-    "genre": ["Adventure"],
+    "genre": [
+      "Adventure"
+    ],
     "collections": [],
     "director": "D. Ross Lederman",
     "description": "A jungle adventure entry in the classic Tarzan film series.",
@@ -185,8 +243,13 @@
     "year": 1938,
     "type": "movie",
     "language": "English",
-    "genre": ["Comedy", "Silent"],
-    "collections": ["Charlie Chaplin"],
+    "genre": [
+      "Comedy",
+      "Silent"
+    ],
+    "collections": [
+      "Charlie Chaplin"
+    ],
     "director": "Charles Chaplin",
     "description": "A compilation of four classic 1917 Chaplin shorts: The Adventurer, The Cure, Easy Street, and The Immigrant.",
     "runtime_minutes": null
@@ -197,7 +260,10 @@
     "year": null,
     "type": "other",
     "language": "English",
-    "genre": ["Comedy", "Short"],
+    "genre": [
+      "Comedy",
+      "Short"
+    ],
     "collections": [],
     "director": "Unknown",
     "description": "A compilation of four classic Three Stooges comedy shorts.",
@@ -209,7 +275,11 @@
     "year": 2008,
     "type": "movie",
     "language": "English",
-    "genre": ["Animation", "Comedy", "Musical"],
+    "genre": [
+      "Animation",
+      "Comedy",
+      "Musical"
+    ],
     "collections": [],
     "director": "Nina Paley",
     "description": "An animated retelling of the Indian epic Ramayana interwoven with a modern breakup story, set to 1920s jazz vocals.",
@@ -221,7 +291,9 @@
     "year": 1951,
     "type": "movie",
     "language": "English",
-    "genre": ["Comedy"],
+    "genre": [
+      "Comedy"
+    ],
     "collections": [],
     "director": "Léo Joannon",
     "description": "The final film Laurel and Hardy made together, about two castaways who found their own nation on a newly emerged island.",
@@ -233,7 +305,10 @@
     "year": 1954,
     "type": "movie",
     "language": "English",
-    "genre": ["Sci-Fi", "Horror"],
+    "genre": [
+      "Sci-Fi",
+      "Horror"
+    ],
     "collections": [],
     "director": "W. Lee Wilder",
     "description": "A scientist is revived by aliens and used as a pawn in their plan to invade Earth.",
@@ -245,7 +320,9 @@
     "year": 1965,
     "type": "movie",
     "language": "English",
-    "genre": ["Horror"],
+    "genre": [
+      "Horror"
+    ],
     "collections": [],
     "director": "Massimo Pupillo",
     "description": "A group of models and photographers are captured and tortured by the deranged owner of an old castle.",
@@ -257,7 +334,9 @@
     "year": 1974,
     "type": "movie",
     "language": "English",
-    "genre": ["Horror"],
+    "genre": [
+      "Horror"
+    ],
     "collections": [],
     "director": "John Hayes",
     "description": "A man tracks down the vampire father who attacked his mother decades earlier.",
@@ -269,7 +348,9 @@
     "year": 1967,
     "type": "movie",
     "language": "English",
-    "genre": ["Sci-Fi"],
+    "genre": [
+      "Sci-Fi"
+    ],
     "collections": [],
     "director": "Derek Thomas",
     "description": "Astronauts crash on Venus and encounter its native inhabitants in this American re-edit of a Soviet science fiction film.",
@@ -281,8 +362,15 @@
     "year": 1939,
     "type": "series",
     "language": "English",
-    "genre": ["Mystery", "Horror", "Thriller", "Detective"],
-    "collections": ["Sherlock Holmes"],
+    "genre": [
+      "Mystery",
+      "Horror",
+      "Thriller",
+      "Detective"
+    ],
+    "collections": [
+      "Sherlock Holmes"
+    ],
     "director": "Sidney Lanfield",
     "description": "Sherlock Holmes investigates the legend of a supernatural hound said to be stalking the heir to a fog-shrouded moorland estate.",
     "runtime_minutes": null
@@ -293,8 +381,15 @@
     "year": 1939,
     "type": "series",
     "language": "English",
-    "genre": ["Mystery", "Crime", "Thriller", "Detective"],
-    "collections": ["Sherlock Holmes"],
+    "genre": [
+      "Mystery",
+      "Crime",
+      "Thriller",
+      "Detective"
+    ],
+    "collections": [
+      "Sherlock Holmes"
+    ],
     "director": "Alfred L. Werker",
     "description": "Sherlock Holmes matches wits with his archenemy Professor Moriarty, who is plotting the crime of the century.",
     "runtime_minutes": null
@@ -305,8 +400,14 @@
     "year": 1943,
     "type": "series",
     "language": "English",
-    "genre": ["Mystery", "Thriller", "Detective"],
-    "collections": ["Sherlock Holmes"],
+    "genre": [
+      "Mystery",
+      "Thriller",
+      "Detective"
+    ],
+    "collections": [
+      "Sherlock Holmes"
+    ],
     "director": "Roy William Neill",
     "description": "Holmes races to rescue an inventor and his revolutionary bomb sight from falling into enemy hands during WWII.",
     "runtime_minutes": null
@@ -317,8 +418,15 @@
     "year": 1945,
     "type": "series",
     "language": "English",
-    "genre": ["Mystery", "Film-Noir", "Thriller", "Detective"],
-    "collections": ["Sherlock Holmes"],
+    "genre": [
+      "Mystery",
+      "Film-Noir",
+      "Thriller",
+      "Detective"
+    ],
+    "collections": [
+      "Sherlock Holmes"
+    ],
     "director": "Roy William Neill",
     "description": "Sherlock Holmes investigates a series of deaths at a remote castle, each foretold by an ominous delivery of orange pips.",
     "runtime_minutes": null
@@ -329,8 +437,16 @@
     "year": 1937,
     "type": "movie",
     "language": "English",
-    "genre": ["Animation", "Comedy", "Animations", "Cartoons"],
-    "collections": ["Animations", "Cartoons"],
+    "genre": [
+      "Animation",
+      "Comedy",
+      "Animations",
+      "Cartoons"
+    ],
+    "collections": [
+      "Animations",
+      "Cartoons"
+    ],
     "director": "Dave Fleischer",
     "description": "A classic public-domain Betty Boop cartoon short from Fleischer Studios.",
     "runtime_minutes": 7
@@ -341,8 +457,16 @@
     "year": 1936,
     "type": "movie",
     "language": "English",
-    "genre": ["Animation", "Comedy", "Animations", "Cartoons"],
-    "collections": ["Animations", "Cartoons"],
+    "genre": [
+      "Animation",
+      "Comedy",
+      "Animations",
+      "Cartoons"
+    ],
+    "collections": [
+      "Animations",
+      "Cartoons"
+    ],
     "director": "Dave Fleischer",
     "description": "A classic public-domain Betty Boop musical cartoon short from Fleischer Studios.",
     "runtime_minutes": 7
@@ -353,8 +477,16 @@
     "year": null,
     "type": "other",
     "language": "English",
-    "genre": ["Animation", "Comedy", "Animations", "Cartoons"],
-    "collections": ["Animations", "Cartoons"],
+    "genre": [
+      "Animation",
+      "Comedy",
+      "Animations",
+      "Cartoons"
+    ],
+    "collections": [
+      "Animations",
+      "Cartoons"
+    ],
     "director": "Fleischer Studios",
     "description": "A compilation reel of classic public-domain Betty Boop and Koko the Clown cartoon shorts.",
     "runtime_minutes": null
@@ -365,8 +497,16 @@
     "year": null,
     "type": "other",
     "language": "English",
-    "genre": ["Animation", "Comedy", "Animations", "Cartoons"],
-    "collections": ["Animations", "Cartoons"],
+    "genre": [
+      "Animation",
+      "Comedy",
+      "Animations",
+      "Cartoons"
+    ],
+    "collections": [
+      "Animations",
+      "Cartoons"
+    ],
     "director": "Fleischer Studios / Famous Studios",
     "description": "A collection of classic Popeye the Sailor cartoon shorts that have fallen into the public domain.",
     "runtime_minutes": null
@@ -377,7 +517,10 @@
     "year": 1946,
     "type": "documentary",
     "language": "English",
-    "genre": ["Documentary", "War"],
+    "genre": [
+      "Documentary",
+      "War"
+    ],
     "collections": [],
     "director": "John Huston",
     "description": "A U.S. Army documentary following the treatment of soldiers with combat-related psychological trauma, suppressed by the government for decades before its public release.",
@@ -389,7 +532,10 @@
     "year": 1954,
     "type": "tvshow",
     "language": "English",
-    "genre": ["Crime", "Drama"],
+    "genre": [
+      "Crime",
+      "Drama"
+    ],
     "collections": [],
     "director": "Jack Webb",
     "description": "An episode of the classic 1950s police procedural series following Sergeant Joe Friday investigating a case in his signature just-the-facts style.",
@@ -401,7 +547,10 @@
     "year": 1947,
     "type": "movie",
     "language": "English",
-    "genre": ["Western", "Romantic"],
+    "genre": [
+      "Western",
+      "Romantic"
+    ],
     "collections": [],
     "director": "James Edward Grant",
     "description": "A wounded outlaw is taken in and nursed back to health by a Quaker family, and finds himself torn between his violent past and a newfound love, starring John Wayne.",
@@ -413,7 +562,10 @@
     "year": 1941,
     "type": "movie",
     "language": "English",
-    "genre": ["Adventure", "Thriller"],
+    "genre": [
+      "Adventure",
+      "Thriller"
+    ],
     "collections": [],
     "director": "Leslie Howard",
     "description": "An English archaeologist secretly smuggles refugees out of Nazi Germany, updating the classic Scarlet Pimpernel adventure story to World War II.",
@@ -425,7 +577,11 @@
     "year": 1926,
     "type": "movie",
     "language": "English",
-    "genre": ["Comedy", "Adventure", "Silent"],
+    "genre": [
+      "Comedy",
+      "Adventure",
+      "Silent"
+    ],
     "collections": [],
     "director": "Buster Keaton",
     "description": "A train engineer sets off on a one-man mission to recover his stolen locomotive after it's commandeered by enemy spies during the Civil War, in this classic silent action-comedy.",
@@ -437,7 +593,10 @@
     "year": 1920,
     "type": "other",
     "language": "English",
-    "genre": ["Comedy", "Silent"],
+    "genre": [
+      "Comedy",
+      "Silent"
+    ],
     "collections": [],
     "director": "Buster Keaton",
     "description": "A newlywed couple attempts to assemble a build-it-yourself portable house in a week, with increasingly chaotic results, in this landmark silent comedy short.",
@@ -449,7 +608,11 @@
     "year": 1927,
     "type": "movie",
     "language": "English",
-    "genre": ["Sci-Fi", "Drama", "Silent"],
+    "genre": [
+      "Sci-Fi",
+      "Drama",
+      "Silent"
+    ],
     "collections": [],
     "director": "Fritz Lang",
     "description": "In a futuristic city sharply divided between wealthy planners and an exploited underground working class, the mastermind's son falls for a woman from the labor movement, setting off a struggle that threatens the entire social order.",
@@ -461,10 +624,30 @@
     "year": 1922,
     "type": "movie",
     "language": "English",
-    "genre": ["Horror", "Silent"],
+    "genre": [
+      "Horror",
+      "Silent"
+    ],
     "collections": [],
     "director": "F.W. Murnau",
     "description": "An unauthorized silent adaptation of Dracula, in which a real estate agent's business trip to a mysterious count's castle unleashes a plague-bearing vampire on his hometown.",
     "runtime_minutes": null
+  },
+  {
+    "title": "Oppenheimer",
+    "year": 2023,
+    "type": "movie",
+    "language": "English",
+    "genre": [
+      "Biography",
+      "Drama",
+      "Thriller"
+    ],
+    "collections": [],
+    "director": "Christopher Nolan",
+    "description": "A dramatization of physicist J. Robert Oppenheimer's leadership of the Manhattan Project and the moral reckoning that followed the creation of the atomic bomb.",
+    "runtime_minutes": 180,
+    "source": "trailer",
+    "trailerYoutubeId": "keydELfWuMQ"
   }
 ]
