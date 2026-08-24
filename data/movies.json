@@ -739,5 +739,44 @@
     "runtime_minutes": 152,
     "source": "trailer",
     "trailerYoutubeId": "wYE1ekxtCJ8"
+  },
+  {
+    "title": "Skyfall",
+    "year": 2012,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Action", "Adventure", "Thriller"],
+    "collections": ["James Bond"],
+    "director": "Sam Mendes",
+    "description": "When an attack on MI6 exposes a threat rooted in agency's own past, Bond must track the perpetrator down while his loyalty and fitness for the job are tested from within.",
+    "runtime_minutes": 143,
+    "source": "trailer",
+    "trailerYoutubeId": "XspvrhC-ty4"
+  },
+  {
+    "title": "Mr. Bean: The Animated Series (Season 4)",
+    "year": 2025,
+    "type": "tvshow",
+    "language": "English",
+    "genre": ["Animation", "Comedy", "Animations", "Cartoons", "Family"],
+    "collections": ["Mr Bean", "Animations", "Cartoons"],
+    "director": "Rowan Atkinson (voice), Tiger Aspect Kids & Family",
+    "description": "The animated continuation of the classic silent-comedy character, following Mr. Bean and his teddy bear through a fresh set of everyday mishaps and mischief.",
+    "runtime_minutes": 11,
+    "source": "trailer",
+    "trailerYoutubeId": "EqEJjqGvydo"
+  },
+  {
+    "title": "Mr. Bean's Holiday",
+    "year": 2007,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Comedy", "Family"],
+    "collections": ["Mr Bean"],
+    "director": "Steve Bendelack",
+    "description": "Mr. Bean wins a trip to the south of France, but a series of mishaps along the way — including accidentally separating a young boy from his father — turns his simple holiday into a chaotic cross-country adventure.",
+    "runtime_minutes": 89,
+    "source": "trailer",
+    "trailerYoutubeId": "VgcVv93GjeQ"
   }
 ]

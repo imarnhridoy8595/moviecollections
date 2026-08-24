@@ -442,7 +442,7 @@ function renderHome(movies) {
   const languages = ["English", "Hindi", "Korean", "Bengali", "South Indian", "Other Languages"];
   const collections = ["Charlie Chaplin", "Mr Bean", "James Bond", "Sherlock Holmes", "Animations", "Cartoons", "Critically Acclaimed"];
   const genres = ["Horror", "Sci-Fi", "Romantic", "Animations", "Cartoons"];
-  const dataGenres = uniqueValues(movies, m => m.genre).filter(g => !genres.includes(g));
+  const dataGenres = uniqueValues(movies, m => m.genre).filter(g => !genres.includes(g) && g !== "Animation");
 
   const body = `<main>
     <section class="shelf">
