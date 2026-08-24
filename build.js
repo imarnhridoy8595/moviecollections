@@ -198,6 +198,16 @@ nav.crumbs a { color: var(--adc-brass-light); text-decoration: none; }
   font-size: 28px; margin: 30px 0 4px;
 }
 .section-sub { color: var(--adc-muted); font-size: 14px; margin: 0 0 10px; }
+
+/* Other Languages filter pills */
+.lang-filter { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 24px; }
+.lang-pill {
+  background: var(--adc-navy-2); border: 1px solid rgba(200,155,60,0.3);
+  color: var(--adc-ivory); font-size: 13px; padding: 6px 14px; border-radius: 20px;
+  cursor: pointer; transition: background 0.15s ease, border-color 0.15s ease;
+}
+.lang-pill:hover { border-color: var(--adc-brass); }
+.lang-pill.active { background: var(--adc-brass); color: var(--adc-navy); font-weight: 600; border-color: var(--adc-brass); }
 .empty-note { color: var(--adc-muted); padding: 30px 0 60px; font-size: 14px; }
 
 /* Latest spotlight card */
@@ -398,6 +408,20 @@ function movieCard(m) {
   </a>`;
 }
 
+// Card variant used only on the Other Languages page — shows the film's
+// actual language beside the year, and carries a data-lang attribute so
+// the on-page language filter can show/hide cards.
+function movieCardWithLanguage(m) {
+  return `<a class="card" href="/movies/${slugify(m.title)}/" data-lang="${m.language}">
+    <div class="poster" style="background-image:url('${moviePoster(m)}')"></div>
+    <div class="card-body">
+      <span class="badge">${m.source === "trailer" ? "Trailer" : (m.genre[0] || m.type)}</span>
+      <h3>${m.title}</h3>
+      <p class="meta">${m.year || ""} &middot; ${m.language}</p>
+    </div>
+  </a>`;
+}
+
 function movieGridOrEmpty(list, emptyMsg) {
   if (!list.length) return `<p class="empty-note">${emptyMsg}</p>`;
   return `<div class="grid">${list.map(movieCard).join("\n")}</div>`;
@@ -499,6 +523,49 @@ function renderListing({ heading, sub, list, movies, activeType, latestHref, lat
   return pageShell({ title: `${heading} — ${SITE_NAME}`, body, movies, activeType, crumbs: `<a href="/">Home</a> / ${heading}` });
 }
 
+// ---------- Other Languages page: shows each film's actual language on its
+// card and adds a scrollable language-filter row. Used only for this page. ----------
+function renderOtherLanguages({ heading, sub, list, movies, latestHref, latestLabel }) {
+  const langs = uniqueValues(list, m => [m.language]).sort();
+  const filterRow = langs.length
+    ? `<div class="lang-filter" id="lang-filter">
+        <button class="lang-pill active" data-lang="all">All</button>
+        ${langs.map(l => `<button class="lang-pill" data-lang="${l}">${l}</button>`).join("")}
+      </div>`
+    : "";
+  const grid = list.length
+    ? `<div class="grid" id="other-lang-grid">${list.map(movieCardWithLanguage).join("\n")}</div>`
+    : `<p class="empty-note">No titles here yet — check back soon, or add matching entries to data/movies.json.</p>`;
+
+  const filterScript = langs.length ? `
+<script>
+(function() {
+  var buttons = document.querySelectorAll('#lang-filter .lang-pill');
+  var cards = document.querySelectorAll('#other-lang-grid .card');
+  buttons.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      buttons.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var lang = btn.getAttribute('data-lang');
+      cards.forEach(function(c) {
+        c.style.display = (lang === 'all' || c.getAttribute('data-lang') === lang) ? '' : 'none';
+      });
+    });
+  });
+})();
+</script>` : "";
+
+  const body = `<main>
+    ${latestHref ? latestNavCard(latestLabel || `Latest in ${heading}`, latestHref) : ""}
+    <h2 class="section-heading">${heading}</h2>
+    ${sub ? `<p class="section-sub">${sub}</p>` : ""}
+    ${filterRow}
+    ${grid}
+  </main>
+  ${filterScript}`;
+  return pageShell({ title: `${heading} — ${SITE_NAME}`, body, movies, crumbs: `<a href="/">Home</a> / ${heading}` });
+}
+
 // ---------- Latest Updates page (aggregates "latest" titles across every language + section) ----------
 function renderLatest(movies) {
   const sections = [
@@ -581,8 +648,11 @@ for (const g of ["Horror", "Sci-Fi", "Romantic", "Animations", "Cartoons"]) {
   }
 }
 
-// Language pages, each with a dedicated "Latest in <language>" sub-page
-for (const l of uniqueValues(movies, m => [m.language])) {
+// Language pages — 5 named languages generate normally; anything else
+// (French, Japanese, etc.) is aggregated into the "Other Languages" page.
+const MAIN_LANGUAGES = ["English", "Hindi", "Korean", "Bengali", "South Indian"];
+
+for (const l of MAIN_LANGUAGES) {
   const langMovies = movies.filter(m => m.language === l);
   const latestHref = `/language/${slugify(l)}/latest/`;
   write(`language/${slugify(l)}`, renderListing({
@@ -594,21 +664,19 @@ for (const l of uniqueValues(movies, m => [m.language])) {
     list: langMovies.filter(m => m.source === "trailer"), movies
   }));
 }
-for (const l of ["English", "Hindi", "Korean", "Bengali", "South Indian", "Other Languages"]) {
-  const dir = `language/${slugify(l)}`;
-  if (!fs.existsSync(path.join(OUT_DIR, dir))) {
-    const langMovies = movies.filter(m => m.language === l);
-    const latestHref = `/language/${slugify(l)}/latest/`;
-    write(dir, renderListing({
-      heading: l, sub: "Language", list: langMovies, movies,
-      latestHref, latestLabel: `Latest in ${l}`
-    }));
-    write(`${dir}/latest`, renderListing({
-      heading: `Latest in ${l}`, sub: "Modern releases (2010–2026), trailer only",
-      list: langMovies.filter(m => m.source === "trailer"), movies
-    }));
-  }
-}
+
+// Other Languages: aggregates every language outside the 5 named ones,
+// shows each film's actual language on its card, and adds a language filter.
+const otherLangMovies = movies.filter(m => !MAIN_LANGUAGES.includes(m.language));
+write("language/other-languages", renderOtherLanguages({
+  heading: "Other Languages", list: otherLangMovies, movies,
+  latestHref: "/language/other-languages/latest/", latestLabel: "Latest in Other Languages"
+}));
+write("language/other-languages/latest", renderOtherLanguages({
+  heading: "Latest in Other Languages", sub: "Modern releases (2010–2026), trailer only",
+  list: otherLangMovies.filter(m => m.source === "trailer"), movies
+}));
+
 
 // Latest Updates page (aggregates every "latest"-flagged title across all languages/sections)
 write("latest", renderLatest(movies));
