@@ -257,8 +257,15 @@ nav.crumbs a { color: var(--adc-brass-light); text-decoration: none; }
 .detail .badge.trailer-badge { background: var(--adc-teal); color: #fff; margin-left: 8px; }
 .detail h1 { font-family: 'Playfair Display', Georgia, serif; color: var(--adc-brass-light); font-size: 34px; margin: 0 0 8px; }
 .detail .meta-row { color: var(--adc-muted); font-size: 14px; margin-bottom: 22px; }
-.player { position: relative; padding-top: 56.25%; margin-bottom: 24px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(200,155,60,0.25); }
+.player { position: relative; padding-top: 56.25%; margin-bottom: 12px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(200,155,60,0.25); }
 .player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.player.native-size { max-width: 640px; padding-top: 480px; margin-left: auto; margin-right: auto; }
+.player-controls { display: flex; justify-content: flex-end; margin-bottom: 20px; }
+.size-toggle {
+  background: var(--adc-navy-2); border: 1px solid rgba(200,155,60,0.3);
+  color: var(--adc-ivory); font-size: 12.5px; padding: 6px 12px; border-radius: 6px; cursor: pointer;
+}
+.size-toggle:hover { border-color: var(--adc-brass); }
 .detail p.desc { line-height: 1.7; color: var(--adc-ivory); max-width: 68ch; }
 .actions { margin-top: 22px; display: flex; gap: 12px; flex-wrap: wrap; }
 .btn { display: inline-block; background: var(--adc-brass); color: var(--adc-navy); padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 14px; }
@@ -485,7 +492,11 @@ function renderMovie(m, movies) {
     const embedUrl = `https://archive.org/embed/${m.identifier}`;
     const detailsUrl = `https://archive.org/details/${m.identifier}`;
     const downloadUrl = `https://archive.org/download/${m.identifier}`;
-    mediaBlock = `<div class="player"><iframe src="${embedUrl}" allowfullscreen></iframe></div>`;
+    const playerId = `player-${slugify(m.title)}`;
+    mediaBlock = `<div class="player-controls">
+      <button class="size-toggle" onclick="var p=document.getElementById('${playerId}');p.classList.toggle('native-size');this.textContent=p.classList.contains('native-size')?'Fit to Width':'View Original Size';">View Original Size</button>
+    </div>
+    <div class="player" id="${playerId}"><iframe src="${embedUrl}" allowfullscreen></iframe></div>`;
     actionsBlock = `<div class="actions">
       <a class="btn" href="${downloadUrl}" target="_blank" rel="noopener">Download on Archive.org</a>
       <a class="btn secondary" href="${detailsUrl}" target="_blank" rel="noopener">View source page</a>
