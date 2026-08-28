@@ -778,5 +778,57 @@
     "runtime_minutes": 89,
     "source": "trailer",
     "trailerYoutubeId": "VgcVv93GjeQ"
+  },
+  {
+    "title": "3 Idiots",
+    "year": 2009,
+    "type": "movie",
+    "language": "Hindi",
+    "genre": ["Comedy", "Drama"],
+    "collections": [],
+    "director": "Rajkumar Hirani",
+    "description": "Two friends set off in search of a long-lost engineering-college classmate, and the search unfolds into a series of flashbacks about a free-thinking friend who challenged the rigid, exam-obsessed culture of their college years.",
+    "runtime_minutes": 170,
+    "source": "trailer",
+    "trailerYoutubeId": "xvszmNXdM4w"
+  },
+  {
+    "title": "Kantara: Chapter 1",
+    "year": 2025,
+    "type": "movie",
+    "language": "South Indian",
+    "genre": ["Action", "Drama", "Adventure"],
+    "collections": [],
+    "director": "Rishab Shetty",
+    "description": "A prequel exploring the mythological origins of the folklore and forest-guardian tradition at the heart of the original Kantara, set generations before its story.",
+    "runtime_minutes": null,
+    "source": "trailer",
+    "trailerYoutubeId": "M2OnifMgvps"
+  },
+  {
+    "title": "Baahubali 2: The Conclusion",
+    "year": 2017,
+    "type": "movie",
+    "language": "South Indian",
+    "genre": ["Action", "Drama", "Adventure"],
+    "collections": [],
+    "director": "S. S. Rajamouli",
+    "description": "The second half of the Baahubali saga finally answers why the kingdom's rightful heir was betrayed and exiled, building to a large-scale confrontation over the throne.",
+    "runtime_minutes": 167,
+    "source": "trailer",
+    "trailerYoutubeId": "G62HrubdD6o"
+  },
+  {
+    "title": "Train to Busan",
+    "year": 2016,
+    "type": "movie",
+    "language": "Korean",
+    "genre": ["Horror", "Action", "Thriller"],
+    "collections": [],
+    "director": "Yeon Sang-ho",
+    "description": "A father and his young daughter are among the passengers trapped aboard a high-speed train as a fast-spreading viral outbreak turns fellow riders into the infected, forcing survivors to fight their way toward safety car by car.",
+    "runtime_minutes": 118,
+    "source": "trailer",
+    "trailerYoutubeId": "97bcFB4VnEk"
   }
 ]
