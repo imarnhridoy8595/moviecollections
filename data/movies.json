@@ -895,5 +895,55 @@
     "runtime_minutes": 105,
     "source": "trailer",
     "trailerYoutubeId": "GFNtVaAuVYY"
+  },
+  {
+    "title": "Pathaan",
+    "year": 2023,
+    "type": "movie",
+    "language": "Hindi",
+    "genre": ["Action", "Thriller"],
+    "collections": [],
+    "director": "Siddharth Anand",
+    "description": "A disavowed intelligence agent is pulled back into action to stop a rogue former colleague from unleashing a devastating attack, in a globe-spanning spy thriller starring Shah Rukh Khan.",
+    "runtime_minutes": 146,
+    "source": "trailer",
+    "trailerYoutubeId": "vqu4z34wENw"
+  },
+  {
+    "title": "Jawan",
+    "year": 2023,
+    "type": "movie",
+    "language": "Hindi",
+    "genre": ["Action", "Thriller", "Drama"],
+    "collections": [],
+    "director": "Atlee",
+    "description": "A man driven by a personal vendetta leads a group of women on a series of high-stakes heists targeting a corrupt system, all while a police officer closes in on uncovering his true identity.",
+    "runtime_minutes": 169,
+    "source": "trailer",
+    "trailerYoutubeId": "COv52Qyctws"
+  },
+  {
+    "identifier": "le-manoir-du-diable-1896-georges-melies",
+    "title": "The House of the Devil",
+    "year": 1896,
+    "type": "movie",
+    "language": "French",
+    "genre": ["Horror", "Silent"],
+    "collections": [],
+    "director": "Georges Méliès",
+    "description": "A brief, playful pantomime sketch depicting an encounter with the Devil and a series of ghostly apparitions in an old castle, frequently cited as the first horror film ever made and one of the earliest depictions of a vampire on screen.",
+    "runtime_minutes": 3
+  },
+  {
+    "identifier": "le-voyage-dans-la-lune-1902-georges-melies",
+    "title": "A Trip to the Moon",
+    "year": 1902,
+    "type": "movie",
+    "language": "French",
+    "genre": ["Sci-Fi", "Adventure", "Silent"],
+    "collections": [],
+    "director": "Georges Méliès",
+    "description": "A group of astronomers are fired to the Moon inside a cannon-launched capsule, where they explore the lunar surface, clash with its native inhabitants, and make their way back to Earth — widely considered the first true science-fiction film.",
+    "runtime_minutes": 13
   }
 ]
