@@ -1,6 +1,6 @@
 [
   {
-    "identifier": "his_girl_friday",
+    "identifier": "his-girl-friday-1940_202109",
     "title": "His Girl Friday",
     "year": 1940,
     "type": "movie",
@@ -542,7 +542,7 @@
     "runtime_minutes": 26
   },
   {
-    "identifier": "angel_and_the_badman",
+    "identifier": "AngelAndTheBadManVideoQualityUpgrade",
     "title": "Angel and the Badman",
     "year": 1947,
     "type": "movie",
@@ -619,7 +619,7 @@
     "runtime_minutes": null
   },
   {
-    "identifier": "Nosferatu1922",
+    "identifier": "Nosferatu_DVD_quality",
     "title": "Nosferatu",
     "year": 1922,
     "type": "movie",
