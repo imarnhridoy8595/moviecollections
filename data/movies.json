@@ -997,5 +997,17 @@
     "runtime_minutes": 164,
     "source": "trailer",
     "trailerYoutubeId": "Gc6dEDnL8JA"
+  },
+  {
+    "identifier": "scarlet-street-1945-remastered-movie-720p-hd",
+    "title": "Scarlet Street",
+    "year": 1945,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Film-Noir", "Crime", "Drama"],
+    "collections": [],
+    "director": "Fritz Lang",
+    "description": "A meek cashier and amateur painter falls for a con artist's girlfriend, who is talked into taking credit for his paintings, setting off a slow-building scheme that spirals into deception, blackmail, and murder.",
+    "runtime_minutes": 102
   }
 ]
