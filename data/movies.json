@@ -357,7 +357,7 @@
     "runtime_minutes": null
   },
   {
-    "identifier": "1-the-hound-of-the-baskervilles-1939-starring-basil-rathbone-nigel-bruce-eng",
+    "identifier": "the-hound-of-the-baskervilles_20210718",
     "title": "The Hound of the Baskervilles",
     "year": 1939,
     "type": "series",
@@ -1009,5 +1009,65 @@
     "director": "Fritz Lang",
     "description": "A meek cashier and amateur painter falls for a con artist's girlfriend, who is talked into taking credit for his paintings, setting off a slow-building scheme that spirals into deception, blackmail, and murder.",
     "runtime_minutes": 102
+  },
+  {
+    "identifier": "Night.Of.The.Living.Dead_1080p",
+    "title": "Night of the Living Dead",
+    "year": 1968,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Horror"],
+    "collections": [],
+    "director": "George A. Romero",
+    "description": "A group of strangers barricades itself inside a rural farmhouse as an unexplained wave of reanimated corpses closes in from every direction, in the low-budget film that essentially invented the modern zombie genre.",
+    "runtime_minutes": 96
+  },
+  {
+    "identifier": "carnival-of-souls-pnm",
+    "title": "Carnival of Souls",
+    "year": 1962,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Horror", "Mystery"],
+    "collections": [],
+    "director": "Herk Harvey",
+    "description": "The sole survivor of a car accident that plunges into a river tries to rebuild a quiet new life as a church organist, but finds herself increasingly drawn toward a derelict lakeside pavilion and haunted by a pale, silent figure that only she can see.",
+    "runtime_minutes": 78
+  },
+  {
+    "identifier": "reefermadness_202207",
+    "title": "Reefer Madness",
+    "year": 1936,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Drama", "Exploitation"],
+    "collections": [],
+    "director": "Louis J. Gasnier",
+    "description": "A melodramatic cautionary tale following a group of high schoolers lured into marijuana use, culminating in a spiral of manic behavior, madness, and tragedy — an infamous exploitation piece originally financed to warn parents, now remembered as an unintentional camp classic.",
+    "runtime_minutes": 66
+  },
+  {
+    "identifier": "Phantom_Planet",
+    "title": "The Phantom Planet",
+    "year": 1961,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Sci-Fi"],
+    "collections": [],
+    "director": "William Marshall",
+    "description": "An astronaut's spacecraft is pulled toward a mysterious asteroid, where he discovers a hidden civilization of miniature people and finds himself shrunk down to their size, thrust into their conflict with a group of hostile alien creatures.",
+    "runtime_minutes": 82
+  },
+  {
+    "identifier": "the.-last.-man.on.-earth.-1964.-proper.-1080p.-blu-ray.-x-264-amiable",
+    "title": "The Last Man on Earth",
+    "year": 1964,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Horror", "Sci-Fi"],
+    "collections": [],
+    "director": "Ubaldo Ragona, Sidney Salkow",
+    "description": "The apparent sole survivor of a global plague that has turned the rest of humanity into vampiric creatures spends his days hunting them and his nights barricaded at home, in this early adaptation of Richard Matheson's novel I Am Legend, starring Vincent Price.",
+    "runtime_minutes": 86
   }
 ]
