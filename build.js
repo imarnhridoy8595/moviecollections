@@ -9,6 +9,7 @@ const DATA_PATH = path.join(__dirname, "data", "movies.json");
 const OUT_DIR = path.join(__dirname, "dist");
 const SITE_NAME = "MOVIE COLLECTIONS";
 const SITE_TAGLINE = "Classic & Public Domain Film Collection";
+const STATIC_DIR = path.join(__dirname, "static");
 
 const raw = JSON.parse(fs.readFileSync(DATA_PATH, "utf-8"));
 
@@ -326,6 +327,9 @@ function pageShell({ title, body, crumbs, activeType, movies, showHeader = true 
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${title}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -724,5 +728,8 @@ write("contact", renderContact(movies));
 
 // CNAME for GitHub Pages custom subdomain
 fs.writeFileSync(path.join(OUT_DIR, "CNAME"), "moviecollections.inazira.com\n");
+["favicon.ico", "favicon-32x32.png", "apple-touch-icon.png"].forEach(f => {
+  fs.copyFileSync(path.join(STATIC_DIR, f), path.join(OUT_DIR, f));
+});
 
 console.log(`Built ${movies.length} movie pages + nav/genre/language/collection pages into /dist`);
