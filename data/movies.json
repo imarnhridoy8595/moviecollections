@@ -1069,5 +1069,29 @@
     "director": "Ubaldo Ragona, Sidney Salkow",
     "description": "The apparent sole survivor of a global plague that has turned the rest of humanity into vampiric creatures spends his days hunting them and his nights barricaded at home, in this early adaptation of Richard Matheson's novel I Am Legend, starring Vincent Price.",
     "runtime_minutes": 86
+  },
+  {
+    "identifier": "AttackOfTheGiantLeeches",
+    "title": "Attack of the Giant Leeches",
+    "year": 1959,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Horror", "Sci-Fi"],
+    "collections": [],
+    "director": "Bernard L. Kowalski",
+    "description": "In a swampy Florida backwater, a game warden and local doctor uncover a series of disappearances tied to giant, blood-draining leeches lurking beneath the water, but struggle to convince the skeptical local sheriff of the threat.",
+    "runtime_minutes": 62
+  },
+  {
+    "identifier": "The_Killer_Shrews_1959",
+    "title": "The Killer Shrews",
+    "year": 1959,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Horror", "Sci-Fi"],
+    "collections": [],
+    "director": "Ray Kellogg",
+    "description": "A small group of people stranded on a remote island during a hurricane find themselves trapped inside a research station, besieged through the night by a pack of oversized, voracious shrews created by a scientist's failed experiment.",
+    "runtime_minutes": 69
   }
 ]
