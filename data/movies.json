@@ -1093,5 +1093,42 @@
     "director": "Ray Kellogg",
     "description": "A small group of people stranded on a remote island during a hurricane find themselves trapped inside a research station, besieged through the night by a pack of oversized, voracious shrews created by a scientist's failed experiment.",
     "runtime_minutes": 69
+  },
+  {
+    "identifier": "TheGreatTrainRobbery1903",
+    "title": "The Great Train Robbery",
+    "year": 1903,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Western", "Silent", "Crime"],
+    "collections": [],
+    "director": "Edwin S. Porter",
+    "description": "A gang of outlaws holds up a passing train, robbing its passengers before fleeing into the wilderness with a posse in pursuit, in a primitive one-reel adventure often credited as a foundational work in narrative filmmaking and the Western genre.",
+    "runtime_minutes": 12
+  },
+  {
+    "identifier": "silent-safety-last",
+    "title": "Safety Last!",
+    "year": 1923,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Comedy", "Silent", "Thriller"],
+    "collections": [],
+    "director": "Fred C. Newmeyer, Sam Taylor",
+    "description": "A young store clerk hatches an ambitious publicity stunt to impress his employer and win back his girlfriend, only to find himself forced to climb the outside of a downtown skyscraper himself, floor by precarious floor, in one of silent comedy's most celebrated set pieces.",
+    "runtime_minutes": 73
+  },
+  {
+    "title": "The Conjuring",
+    "year": 2013,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Horror", "Thriller"],
+    "collections": [],
+    "director": "James Wan",
+    "description": "Paranormal investigators Ed and Lorraine Warren are called in to help a family terrorized by a dark presence in their newly purchased farmhouse, uncovering a history of tragedy tied to the land itself.",
+    "runtime_minutes": 112,
+    "source": "trailer",
+    "trailerYoutubeId": "ejMMn0t58Lc"
   }
 ]
