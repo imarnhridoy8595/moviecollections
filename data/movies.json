@@ -1130,5 +1130,65 @@
     "runtime_minutes": 112,
     "source": "trailer",
     "trailerYoutubeId": "ejMMn0t58Lc"
+  },
+  {
+    "identifier": "sherlock-jr_202506",
+    "title": "Sherlock Jr.",
+    "year": 1924,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Comedy", "Silent", "Romantic"],
+    "collections": [],
+    "director": "Buster Keaton",
+    "description": "A daydreaming movie projectionist falls asleep on the job and imagines himself stepping into the film he's screening, becoming a master detective solving a jewel theft, in a groundbreaking silent comedy built around elaborate visual trickery.",
+    "runtime_minutes": 45
+  },
+  {
+    "identifier": "Woman_in_the_Dark_1934",
+    "title": "Woman in the Dark",
+    "year": 1934,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Crime", "Drama"],
+    "collections": [],
+    "director": "Phil Rosen",
+    "description": "A man recently released from prison seeks a quiet life alone in a rural cabin, only for his fragile new start to unravel when a woman fleeing a dangerous pursuer bursts into his home, based on a story by Dashiell Hammett.",
+    "runtime_minutes": 68
+  },
+  {
+    "identifier": "behave_yourself_ipod",
+    "title": "Behave Yourself!",
+    "year": 1951,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Comedy", "Romantic"],
+    "collections": [],
+    "director": "George Beck",
+    "description": "A young married man finds an oddly behaved stray dog, unaware it holds the key to a shipment of stolen loot, pulling him and his wife into the crosshairs of the gangsters looking for it.",
+    "runtime_minutes": 80
+  },
+  {
+    "identifier": "AfricaScreams",
+    "title": "Africa Screams",
+    "year": 1949,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Comedy", "Adventure"],
+    "collections": [],
+    "director": "Charles Barton",
+    "description": "Two bumbling booksellers set off on a safari after learning of a hidden diamond map, leading them through a series of misadventures with wildlife, hunters, and a legendary giant ape, starring Bud Abbott and Lou Costello.",
+    "runtime_minutes": 79
+  },
+  {
+    "identifier": "AtWarWithTheArmy",
+    "title": "At War with the Army",
+    "year": 1950,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Comedy", "Musical"],
+    "collections": [],
+    "director": "Hal Walker",
+    "description": "A well-meaning but perpetually unlucky army private navigates basic training under a sergeant with a mean streak, in the film debut of the Martin and Lewis comedy duo.",
+    "runtime_minutes": 93
   }
 ]
