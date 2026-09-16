@@ -1190,5 +1190,88 @@
     "director": "Hal Walker",
     "description": "A well-meaning but perpetually unlucky army private navigates basic training under a sergeant with a mean streak, in the film debut of the Martin and Lewis comedy duo.",
     "runtime_minutes": 93
+  },
+  {
+    "title": "Bluebeard",
+    "year": 1944,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Horror", "Crime", "Drama"],
+    "collections": [],
+    "director": "Edgar G. Ulmer",
+    "description": "A Parisian puppeteer and portrait painter is secretly the serial strangler terrorizing the city, compelled to kill again each time a new model reminds him of the woman he lost, in a low-budget horror piece loosely inspired by the classic folk tale.",
+    "runtime_minutes": 73
+  },
+  {
+    "identifier": "dementia-13-1963_202312",
+    "title": "Dementia 13",
+    "year": 1963,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Horror", "Thriller"],
+    "collections": [],
+    "director": "Francis Ford Coppola",
+    "description": "A scheming widow conceals her husband's sudden death in order to secure her place in his wealthy Irish family's will, only to find herself and the rest of the household stalked by an axe-wielding killer during a memorial ritual gone wrong, in the directorial debut of Francis Ford Coppola.",
+    "runtime_minutes": 75
+  },
+  {
+    "identifier": "geckos-sb1080p",
+    "title": "Spider Baby",
+    "year": 1967,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Horror", "Comedy"],
+    "collections": [],
+    "director": "Jack Hill",
+    "description": "A devoted family chauffeur cares for three siblings afflicted with a rare degenerative condition that causes them to regress into feral, childlike cruelty, but their fragile household is thrown into chaos when distant relatives arrive hoping to claim their inheritance.",
+    "runtime_minutes": 81
+  },
+  {
+    "identifier": "white.zombie.1932",
+    "title": "White Zombie",
+    "year": 1932,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Horror"],
+    "collections": [],
+    "director": "Victor Halperin",
+    "description": "A young couple traveling to Haiti to marry catch the eye of a wealthy plantation owner, who enlists a voodoo master to transform the bride-to-be into a mindless zombie under his control, in the film widely credited as the very first zombie feature ever made.",
+    "runtime_minutes": 67
+  },
+  {
+    "identifier": "Hxan1922720p",
+    "title": "Häxan",
+    "year": 1922,
+    "type": "documentary",
+    "language": "Other Languages",
+    "genre": ["Horror", "Documentary", "Silent"],
+    "collections": [],
+    "director": "Benjamin Christensen",
+    "description": "A genre-blurring exploration of witchcraft and demonology across history, mixing documentary-style examination of medieval art and superstition with staged dramatic vignettes depicting the persecution of an accused witch, closing with a comparison to modern psychology.",
+    "runtime_minutes": 105
+  },
+  {
+    "identifier": "TheBrainThatWouldntDieTheatricalVersion82Min.",
+    "title": "The Brain That Wouldn't Die",
+    "year": 1962,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Horror", "Sci-Fi"],
+    "collections": [],
+    "director": "Joseph Green",
+    "description": "A surgeon obsessed with unorthodox transplant experiments keeps his fiancee's severed head alive after a car accident, then sets out to find her a new body, hiding a growing horror in his basement laboratory in the meantime.",
+    "runtime_minutes": 82
+  },
+  {
+    "identifier": "manos-the-hands-of-fate",
+    "title": "Manos: The Hands of Fate",
+    "year": 1966,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Horror"],
+    "collections": [],
+    "director": "Harold P. Warren",
+    "description": "A family on a road trip takes a wrong turn and stumbles upon an isolated house serving as the headquarters of a hidden, devil-worshipping cult, presided over by a mysterious Master and his unsettling servant.",
+    "runtime_minutes": 74
   }
 ]
