@@ -1273,5 +1273,65 @@
     "director": "Harold P. Warren",
     "description": "A family on a road trip takes a wrong turn and stumbles upon an isolated house serving as the headquarters of a hidden, devil-worshipping cult, presided over by a mysterious Master and his unsettling servant.",
     "runtime_minutes": 74
+  },
+  {
+    "identifier": "the.little.shop.of.horrors.1960.1080p.bluray.x264-psychd",
+    "title": "The Little Shop of Horrors",
+    "year": 1960,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Comedy", "Horror"],
+    "collections": [],
+    "director": "Roger Corman",
+    "description": "A clumsy assistant at a struggling skid-row flower shop cultivates a strange new plant that draws in crowds and saves the business, but the plant turns out to have an appetite that only human blood can satisfy.",
+    "runtime_minutes": 72
+  },
+  {
+    "identifier": "teenagers-from-outer-space-1959",
+    "title": "Teenagers from Outer Space",
+    "year": 1959,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Sci-Fi", "Horror"],
+    "collections": [],
+    "director": "Tom Graeff",
+    "description": "A young alien scout defies his crew after they select Earth as a breeding ground for their monstrous livestock, and goes on the run among humans while his former comrades hunt him with disintegrator rays.",
+    "runtime_minutes": 86
+  },
+  {
+    "identifier": "meet-john-doe-1941-1080p-hdtv-x-265-r00t",
+    "title": "Meet John Doe",
+    "year": 1941,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Comedy", "Drama", "Romantic"],
+    "collections": [],
+    "director": "Frank Capra",
+    "description": "A newspaper columnist facing dismissal invents a letter from a fictional everyman threatening to take his own life in protest of social injustice, and when the story explodes the paper hires a down-on-his-luck former ballplayer to play the part, setting off a national movement that soon slips beyond anyone's control.",
+    "runtime_minutes": 122
+  },
+  {
+    "identifier": "penny-serenade-1941-by-george-stevens",
+    "title": "Penny Serenade",
+    "year": 1941,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Drama", "Romantic"],
+    "collections": [],
+    "director": "George Stevens",
+    "description": "As a woman prepares to leave her marriage, a set of old records draws her back through the years she spent with her husband, from their whirlwind courtship to the joys and heartbreaks of trying to build a family together, starring Irene Dunne and Cary Grant.",
+    "runtime_minutes": 120
+  },
+  {
+    "identifier": "NothingSacredVideoQualityUpgrade",
+    "title": "Nothing Sacred",
+    "year": 1937,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Comedy", "Drama", "Romantic"],
+    "collections": [],
+    "director": "William A. Wellman",
+    "description": "A small-town woman mistakenly told she is dying of radium poisoning keeps up the pretense after a big-city reporter turns her into a national sensation, in a sharp-edged screwball satire of press sentimentality and Carole Lombard's only Technicolor feature.",
+    "runtime_minutes": 77
   }
 ]
