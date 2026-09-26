@@ -1333,5 +1333,29 @@
     "director": "William A. Wellman",
     "description": "A small-town woman mistakenly told she is dying of radium poisoning keeps up the pretense after a big-city reporter turns her into a national sensation, in a sharp-edged screwball satire of press sentimentality and Carole Lombard's only Technicolor feature.",
     "runtime_minutes": 77
+  },
+  {
+    "identifier": "miracle-on-34th-street-1947_202312",
+    "title": "Miracle on 34th Street",
+    "year": 1947,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Comedy", "Drama", "Family"],
+    "collections": [],
+    "director": "George Seaton",
+    "description": "A department store Santa Claus who insists he is the genuine article throws a skeptical single mother and her equally skeptical young daughter into a courtroom battle to prove his sanity, and by extension, that real Christmas magic still exists.",
+    "runtime_minutes": 96
+  },
+  {
+    "identifier": "the-farmers-daughter-1947",
+    "title": "The Farmer's Daughter",
+    "year": 1947,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Comedy", "Drama", "Romantic"],
+    "collections": [],
+    "director": "H.C. Potter",
+    "description": "A Swedish-American farm girl who travels to the city to study nursing loses her tuition money to a con artist and takes a job as a housemaid for a congressman, whose growing admiration for her sharp political instincts unexpectedly pulls her into a run for office herself.",
+    "runtime_minutes": 97
   }
 ]
