@@ -82,7 +82,7 @@
     "runtime_minutes": null
   },
   {
-    "identifier": "lost_world",
+    "identifier": "the.-lost.-world.-1925.1080p.-blu-ray.x-264-sadpanda",
     "title": "The Lost World",
     "year": 1925,
     "type": "movie",
@@ -1357,5 +1357,41 @@
     "director": "H.C. Potter",
     "description": "A Swedish-American farm girl who travels to the city to study nursing loses her tuition money to a con artist and takes a job as a housemaid for a congressman, whose growing admiration for her sharp political instincts unexpectedly pulls her into a run for office herself.",
     "runtime_minutes": 97
+  },
+  {
+    "identifier": "the-bat-whispers-1930",
+    "title": "The Bat Whispers",
+    "year": 1930,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Mystery", "Thriller", "Comedy"],
+    "collections": [],
+    "director": "Roland West",
+    "description": "A hooded master criminal known only as The Bat terrorizes the guests of an isolated country mansion over the course of one tense, comedy-tinged night, in an early talkie whose visual style is often cited as an inspiration for Bob Kane's creation of Batman.",
+    "runtime_minutes": 83
+  },
+  {
+    "identifier": "One_Body_Too_Many_1944",
+    "title": "One Body Too Many",
+    "year": 1944,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Mystery", "Comedy"],
+    "collections": [],
+    "director": "Frank McDonald",
+    "description": "An insurance salesman sent to guard a wealthy eccentric's corpse until the reading of his will finds the old dark mansion crawling with greedy relatives, a mysterious astrologer, and a growing body count, starring Bela Lugosi.",
+    "runtime_minutes": 75
+  },
+  {
+    "identifier": "the.-wasp.-woman.-1959.-theatrical.-cut.-1080p.-blu-ray.-h-264.-aac-rarbg",
+    "title": "The Wasp Woman",
+    "year": 1959,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Horror", "Sci-Fi"],
+    "collections": [],
+    "director": "Roger Corman",
+    "description": "The head of a cosmetics company, desperate to reverse her own aging, experiments on herself with an untested youth serum derived from wasp royal jelly, only to discover the formula carries a monstrous and murderous side effect.",
+    "runtime_minutes": 66
   }
 ]
