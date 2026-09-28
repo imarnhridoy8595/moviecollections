@@ -1453,5 +1453,41 @@
     "director": "Sam Newfield",
     "description": "Just before her wedding, a woman is warned off by her fiance's supposedly dead first wife, who is found murdered soon afterward, leaving the bride-to-be to track down the real killer and clear his name among a circle of suspects at a shady nightclub.",
     "runtime_minutes": 64
+  },
+  {
+    "identifier": "steamboat-bill-jr.-1928-by-buster-keaton",
+    "title": "Steamboat Bill, Jr.",
+    "year": 1928,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Comedy", "Silent"],
+    "collections": [],
+    "director": "Buster Keaton",
+    "description": "A college-educated dandy returns to his rough river-town father, a struggling steamboat captain locked in a rivalry with a wealthy competitor, and must win the old man's respect while courting the rival's daughter, all building to a legendary cyclone-set finale of practical stunts.",
+    "runtime_minutes": 71
+  },
+  {
+    "identifier": "the-navigator-keaton-1924-high-quality-1080p-fgo-qarunxf-q",
+    "title": "The Navigator",
+    "year": 1924,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Comedy", "Silent", "Romantic"],
+    "collections": [],
+    "director": "Buster Keaton, Donald Crisp",
+    "description": "A wealthy, hapless young man and the socialite who rejected his hasty marriage proposal both end up stranded alone together aboard a massive, adrift ocean liner, forced to learn basic survival from scratch as they fall for each other along the way.",
+    "runtime_minutes": 59
+  },
+  {
+    "identifier": "our-hospitality-keaton-and-blystone-1923-high-quality-1080p-db-1-iz-urnfr-m",
+    "title": "Our Hospitality",
+    "year": 1923,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Comedy", "Silent"],
+    "collections": [],
+    "director": "Buster Keaton, John G. Blystone",
+    "description": "A young man returning to claim his family's Appalachian homestead falls for a woman from the rival family sworn to kill every man in his bloodline, forcing him to survive under their own roof by an old code of hospitality that forbids harming a guest.",
+    "runtime_minutes": 75
   }
 ]
