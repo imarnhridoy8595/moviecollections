@@ -1393,5 +1393,65 @@
     "director": "Roger Corman",
     "description": "The head of a cosmetics company, desperate to reverse her own aging, experiments on herself with an untested youth serum derived from wasp royal jelly, only to discover the formula carries a monstrous and murderous side effect.",
     "runtime_minutes": 66
+  },
+  {
+    "identifier": "thekilling1956",
+    "title": "The Killing",
+    "year": 1956,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Film-Noir", "Crime", "Thriller"],
+    "collections": [],
+    "director": "Stanley Kubrick",
+    "description": "A career criminal assembles a five-man crew for one final, meticulously planned racetrack heist, but a jealous wife's own scheme threatens to unravel the entire operation just as everything is about to pay off, in Stanley Kubrick's breakthrough film noir.",
+    "runtime_minutes": 84
+  },
+  {
+    "identifier": "KingOfTheZombies",
+    "title": "King of the Zombies",
+    "year": 1941,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Horror", "Comedy"],
+    "collections": [],
+    "director": "Jean Yarbrough",
+    "description": "A plane forced off course by a storm crash-lands on a remote Caribbean island, where its stranded passengers stumble into the mansion of a sinister doctor secretly using voodoo to raise an army of zombies for a foreign power.",
+    "runtime_minutes": 67
+  },
+  {
+    "identifier": "Devil_Bat_movie",
+    "title": "The Devil Bat",
+    "year": 1940,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Horror", "Sci-Fi"],
+    "collections": [],
+    "director": "Jean Yarbrough",
+    "description": "A small-town chemist embittered over being cheated out of his fair share of a company's profits secretly breeds giant killer bats trained to attack anyone wearing a scented aftershave lotion he personally gifts to his unsuspecting former employers, starring Bela Lugosi.",
+    "runtime_minutes": 68
+  },
+  {
+    "identifier": "the-hitch-hiker-1953-film-noir",
+    "title": "The Hitch-Hiker",
+    "year": 1953,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Film-Noir", "Thriller", "Crime"],
+    "collections": [],
+    "director": "Ida Lupino",
+    "description": "Two friends on a fishing trip to Mexico pick up a stranded motorist who turns out to be a fugitive killer, and find themselves held at gunpoint on a tense desert ride, in the film widely credited as the first mainstream American noir directed by a woman.",
+    "runtime_minutes": 71
+  },
+  {
+    "identifier": "Lady_Confesses",
+    "title": "The Lady Confesses",
+    "year": 1945,
+    "type": "movie",
+    "language": "English",
+    "genre": ["Film-Noir", "Mystery", "Crime"],
+    "collections": [],
+    "director": "Sam Newfield",
+    "description": "Just before her wedding, a woman is warned off by her fiance's supposedly dead first wife, who is found murdered soon afterward, leaving the bride-to-be to track down the real killer and clear his name among a circle of suspects at a shady nightclub.",
+    "runtime_minutes": 64
   }
 ]
